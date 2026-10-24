@@ -4,13 +4,13 @@ A standalone, responsive computational research community website for ScaleSTEM.
 
 ## Run locally
 
-Requires Node.js 20.11 or newer.
+Requires Node.js 20.11 or newer. No package installation is needed.
 
 ```sh
-npm run dev
+node server.js
 ```
 
-Open [http://localhost:4173](http://localhost:4173). Set `PORT` to use another port. `npm start` runs the same server.
+Open [http://localhost:4173](http://localhost:4173). Set `PORT` to use another port. If npm is installed, `npm run dev` and `npm start` run the same server.
 
 ## Deploy
 
