@@ -1,6 +1,6 @@
 # ScaleStem
 
-A standalone, responsive computational research community website for ScaleSTEM. The site runs from this repository, with no Wix dependency, third-party framework, build step, hosted font, or remote image dependency.
+A standalone, responsive one-page website for the ScaleSTEM computational research community. It runs from this repository without Wix, a third-party framework, a build step, hosted fonts, or remote images.
 
 ## Run locally
 
@@ -16,14 +16,12 @@ Open [http://localhost:4173](http://localhost:4173). Set `PORT` to use another p
 
 The static site in `public/` can be served by any static web host. For a persistent Node host, run `npm start`; it listens on `PORT` and binds to `0.0.0.0`.
 
-## Pages
+## Homepage sections
 
-- `/` — Home
-- `/about` — Mission and five-step methodology
-- `/programs` — Overview of the 8–12 week mentored cohort
-- `/apply` — Prospective student interest form
-- `/mentor` — TA and mentor interest
-- `/journal` — Research journal overview
-- `/contact` — Contact form
+- Mission
+- Program methodology
+- Prospective student interest form
+- Research journal (work in progress)
+- TA/mentor interest and contact
 
-Forms validate in the browser and open a pre-filled email addressed to `scalestem@gmail.com` for the visitor to review and send. Nothing is submitted automatically or stored by this site. The student form registers interest only; it does not promise a cohort start date or placement.
+The student form validates in the browser and opens a pre-filled email addressed to `scalestem@gmail.com` for the visitor to review and send. Nothing is sent automatically or stored by this site. The form registers interest in a future cohort; timing and placement are not confirmed.
