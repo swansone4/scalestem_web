@@ -1,13 +1,13 @@
 {
-  "devDependencies": {
-    "@wix/cli": "^1.0.0",
-    "@wix/eslint-plugin-cli": "^1.0.0",
-    "eslint": "^8.25.0",
-    "react": "16.14.0"
-  },
+  "name": "scalestem-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Independent ScaleStem STEM learning website",
+  "type": "module",
   "scripts": {
-    "postinstall": "wix sync-types",
-    "dev": "wix dev",
-    "lint": "eslint ."
+    "dev": "node server.js",
+    "start": "node server.js",
+    "serve": "node server.js",
+    "lint": "node --check server.js && node --check public/app.js"
   }
 }
