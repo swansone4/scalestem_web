@@ -23,19 +23,38 @@
 
   <main>
     <section class="problem-section" id="problem" aria-labelledby="problem-title">
-      <div class="problem-inner page-width">
-        <div class="problem-heading">
+      <div class="problem-inner">
+        <div class="problem-heading page-width">
           <p class="eyebrow"><span>001/</span> THE PROBLEM</p>
           <h1 id="problem-title">Endless applications.<br>The same <em class="problem-result">result</em>.</h1>
-          <p>When a resume has no project related to the role, it is harder to show how your skills fit. Sending more applications does not add that missing evidence.</p>
         </div>
 
-        <div class="application-simulation" id="search-simulation" data-application-sim role="region" aria-label="Illustrative job application tracker and Gmail-style inbox">
-          <div class="desktop-chrome" aria-hidden="true"><span class="window-dots"><i></i><i></i><i></i></span><span class="window-address">scalestem.local / job search</span><span class="window-menu">•••</span></div>
+        <section class="market-ribbon" data-market-ribbon aria-label="Voices on the entry-level job market">
+          <div class="market-ribbon-head"><span>ENTRY-LEVEL JOB SEARCH · VOICES FROM 2026</span><button type="button" data-market-toggle aria-pressed="false" aria-label="Pause scrolling quotes">Pause</button></div>
+          <div class="market-viewport">
+            <div class="market-track" data-market-track>
+              <div class="market-quote-set">
+                <figure class="market-quote"><blockquote>“I’ve applied to over 90 jobs.”</blockquote><figcaption><a href="https://www.theguardian.com/us-news/2026/apr/12/college-graduates-job-market-ai" target="_blank" rel="noreferrer">Gillian Frost <span>Graduating student · The Guardian, 2026</span></a></figcaption></figure>
+                <figure class="market-quote"><blockquote>“Graduates are being asked to enter the workforce with experience…”</blockquote><figcaption><a href="https://www.cengagegroup.com/news/press-releases/2026/stepping-stone-jobs-hands-on-experience-independent-learning--more-cengage-2026-employability-report-shows-how-employer-expectations-are-reshaping-career-readiness/" target="_blank" rel="noreferrer">Michael Hansen <span>Cengage CEO · 2026</span></a></figcaption></figure>
+                <figure class="market-quote"><blockquote>“…they’re not going to have mid-level career people in a few years.”</blockquote><figcaption><a href="https://apnews.com/article/ai-computer-science-jobs-college-degree-99416cc8981d701e3674cf3dfa501491" target="_blank" rel="noreferrer">Tracy Camp <span>Computing Research Association · AP, 2026</span></a></figcaption></figure>
+                <figure class="market-quote"><blockquote>“It’s a tough time for new graduates.”</blockquote><figcaption><a href="https://www.insidehighered.com/news/students/careers/2026/06/29/job-market-recent-college-grads-5-charts" target="_blank" rel="noreferrer">Jaison Abel <span>Federal Reserve Bank of New York · 2026</span></a></figcaption></figure>
+                <figure class="market-quote"><blockquote>“…automatically at a disadvantage.”</blockquote><figcaption><a href="https://www.techradar.com/pro/entry-level-jobs-reject-1-in-3-uk-graduates-for-lacking-experience" target="_blank" rel="noreferrer">Amanda Augustine <span>Careers expert · TechRadar, 2026</span></a></figcaption></figure>
+              </div>
+              <div class="market-quote-set" aria-hidden="true">
+                <figure class="market-quote"><blockquote>“I’ve applied to over 90 jobs.”</blockquote><figcaption>Gillian Frost <span>Graduating student · The Guardian, 2026</span></figcaption></figure>
+                <figure class="market-quote"><blockquote>“Graduates are being asked to enter the workforce with experience…”</blockquote><figcaption>Michael Hansen <span>Cengage CEO · 2026</span></figcaption></figure>
+                <figure class="market-quote"><blockquote>“…they’re not going to have mid-level career people in a few years.”</blockquote><figcaption>Tracy Camp <span>Computing Research Association · AP, 2026</span></figcaption></figure>
+                <figure class="market-quote"><blockquote>“It’s a tough time for new graduates.”</blockquote><figcaption>Jaison Abel <span>Federal Reserve Bank of New York · 2026</span></figcaption></figure>
+                <figure class="market-quote"><blockquote>“…automatically at a disadvantage.”</blockquote><figcaption>Amanda Augustine <span>Careers expert · TechRadar, 2026</span></figcaption></figure>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="application-simulation page-width" id="search-simulation" data-application-sim role="region" aria-label="Illustrative job application tracker and Gmail-style inbox">
           <div class="simulation-grid">
             <section class="application-panel" aria-label="Application tracker illustration">
-              <div class="tracker-topbar"><div class="tracker-brand"><span class="tracker-mark" aria-hidden="true">S</span><span>Application tracker</span></div><span class="demo-tag">STUDENT VIEW · DEMO</span></div>
-              <div class="application-summary"><div><span class="summary-label">APPLICATIONS SENT</span><div class="count-row"><strong data-application-count aria-hidden="true">28</strong><span class="count-plus" aria-hidden="true">+</span><span class="count-label">and counting</span></div></div><span class="tracker-trend">↗ Active search</span></div>
+              <div class="application-summary"><span class="summary-label">APPLICATIONS SENT</span><div class="count-row"><strong data-application-count aria-hidden="true">28</strong><span class="count-plus" aria-hidden="true">+</span><span class="count-label">and counting</span></div></div>
               <p class="platform-heading">APPLICATION SOURCES</p>
               <div class="platforms" aria-label="Example sources: LinkedIn and Indeed">
                 <span class="platform-chip"><img src="/assets/linkedin.svg" alt=""><span>LinkedIn</span></span>
@@ -43,11 +62,11 @@
                 <span class="platform-chip platform-chip-other">Company sites</span>
               </div>
               <div class="list-heading"><span>RECENT APPLICATIONS</span><span>STATUS</span></div>
-              <div class="application-list">
+              <div class="application-list" aria-live="polite" aria-relevant="additions">
                 <article class="job-row"><span class="job-source-mark"><img src="/assets/linkedin.svg" alt=""></span><div><strong>Modeling Engineer</strong><small>Company 01 · LinkedIn</small></div><span class="status-label status-pending">No reply</span></article>
                 <article class="job-row"><span class="job-source-mark job-source-indeed"><img src="/assets/indeed.svg" alt=""></span><div><strong>Simulation Intern</strong><small>Company 02 · Indeed</small></div><span class="status-label status-rejected">Not selected</span></article>
                 <article class="job-row"><span class="job-source-mark"><img src="/assets/linkedin.svg" alt=""></span><div><strong>Systems Analyst</strong><small>Company 03 · LinkedIn</small></div><span class="status-label status-pending">Submitted</span></article>
-                <article class="job-row"><span class="job-source-mark job-source-indeed"><img src="/assets/indeed.svg" alt=""></span><div><strong>Research Associate</strong><small>Company 04 · Indeed</small></div><span class="status-label status-review">In review</span></article>
+                <article class="job-row"><span class="job-source-mark job-source-indeed"><img src="/assets/indeed.svg" alt=""></span><div><strong>Research Fellowship</strong><small>Company 04 · Indeed</small></div><span class="status-label status-review">In review</span></article>
               </div>
             </section>
 
@@ -61,7 +80,7 @@
               <div class="gmail-body">
                 <aside class="gmail-sidebar" aria-label="Gmail folders">
                   <div class="compose-button"><span aria-hidden="true">✎</span>Compose</div>
-                  <div class="gmail-folder gmail-folder-active"><span aria-hidden="true">▣</span><strong>Inbox</strong><b>28</b></div>
+                  <div class="gmail-folder gmail-folder-active"><span aria-hidden="true">▣</span><strong>Inbox</strong><b data-inbox-total>28</b></div>
                   <div class="gmail-folder"><span aria-hidden="true">☆</span>Starred</div>
                   <div class="gmail-folder"><span aria-hidden="true">◷</span>Snoozed</div>
                   <div class="gmail-folder"><span aria-hidden="true">➤</span>Sent</div>
@@ -70,31 +89,28 @@
                   <div class="gmail-folder gmail-label"><span aria-hidden="true">◆</span>Job applications</div>
                 </aside>
                 <div class="gmail-inbox">
-                  <div class="gmail-toolbar"><div class="gmail-toolbar-actions"><span class="checkbox-icon" aria-hidden="true"></span><span>⌄</span><span>↻</span><span>⋮</span></div><span>1–3 of 28&nbsp; ‹ &nbsp;›</span></div>
+                  <div class="gmail-toolbar"><div class="gmail-toolbar-actions"><span class="checkbox-icon" aria-hidden="true"></span><span>⌄</span><span>↻</span><span>⋮</span></div><span><span data-email-range>1–3</span> of <span data-inbox-total>28</span>&nbsp; ‹ &nbsp;›</span></div>
                   <div class="gmail-tabs"><span class="gmail-tab-active"><i aria-hidden="true">▣</i>Primary</span><span><i aria-hidden="true">▰</i>Promotions</span><span><i aria-hidden="true">♧</i>Social</span></div>
-                  <div class="reply-list">
-                    <article class="email-row"><span class="email-checkbox" aria-hidden="true"></span><span class="email-star" aria-hidden="true">☆</span><strong class="email-sender">Company 02</strong><div class="email-subject"><strong>Update on your application</strong><span> — Thank you for applying. We have decided to move forward with another candidate.</span></div><time>10:42 AM</time></article>
-                    <article class="email-row"><span class="email-checkbox" aria-hidden="true"></span><span class="email-star" aria-hidden="true">☆</span><strong class="email-sender">Company 04</strong><div class="email-subject"><strong>Your application is under review</strong><span> — Your application is with our team. We will be in touch if there is a match.</span></div><time>Yesterday</time></article>
+                  <div class="reply-list" aria-live="polite" aria-relevant="additions">
+                    <article class="email-row"><span class="email-checkbox" aria-hidden="true"></span><span class="email-star" aria-hidden="true">☆</span><strong class="email-sender">Company 02</strong><div class="email-subject"><strong>Update on your internship application</strong><span> — Thank you for applying. We have decided to move forward with another candidate.</span></div><time>10:42 AM</time></article>
+                    <article class="email-row"><span class="email-checkbox" aria-hidden="true"></span><span class="email-star" aria-hidden="true">☆</span><strong class="email-sender">Company 04</strong><div class="email-subject"><strong>Fellowship decision</strong><span> — We are unable to offer you a fellowship this cycle.</span></div><time>Yesterday</time></article>
                     <article class="email-row"><span class="email-checkbox" aria-hidden="true"></span><span class="email-star" aria-hidden="true">☆</span><strong class="email-sender">Company 01</strong><div class="email-subject"><strong>Application received: Modeling Engineer</strong><span> — We received your application. You will hear from us if there is an update.</span></div><time>Oct 21</time></article>
                   </div>
-                  <div class="gmail-empty-state"><span>↘</span> One application is still waiting for a reply.</div>
                 </div>
               </div>
             </section>
           </div>
           <div class="simulation-footer"><p>ILLUSTRATIVE MOCKUP · FICTIONAL ACTIVITY · NOT CONNECTED TO THESE SERVICES</p><button type="button" data-replay-simulation>Replay the sequence <span aria-hidden="true">↻</span></button></div>
-          <p class="visually-hidden">Illustration only. Applications accumulate while inbox replies show a rejection, an application under review, and no response.</p>
+          <p class="visually-hidden">Illustration only. Applications accumulate while fictional rejection emails arrive for jobs, internships, and fellowships.</p>
         </div>
 
-        <div class="problem-bridge"><p><strong>The solution: turn your direction into real project evidence.</strong> Build a mentored computational research project and a reviewed technical report you can explain to employers.</p><a href="#resume-example">See the resume change <span aria-hidden="true">↓</span></a></div>
       </div>
     </section>
 
     <section class="resume-section" id="resume-example" aria-labelledby="resume-title">
       <div class="resume-intro page-width">
         <p class="eyebrow"><span>002/</span> THE SOLUTION</p>
-        <h2 id="resume-title">Show the difference<br>one project can <em>make.</em></h2>
-        <p>Choose the roles you want, then build the methods and mentored computational project to support your next application. The resumes below show one fictional example of what that evidence could look like. Hover or focus either page to inspect it.</p>
+        <h2 id="resume-title"><span class="resume-title-green">One computational research project</span><br>can <em class="resume-title-red">drastically</em> help you.</h2>
       </div>
 
       <div class="resume-comparison page-width">
@@ -142,12 +158,13 @@
         </article>
 
         <div class="resume-transition" aria-label="The research project is added to the resume">
-          <svg viewBox="0 0 84 64" role="img" aria-labelledby="arrow-title">
+          <svg viewBox="0 0 100 72" role="img" aria-labelledby="arrow-title">
             <title id="arrow-title">A research project moves the resume from before to after</title>
-            <defs><marker id="arrowhead" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z"></path></marker></defs>
-            <path class="transition-line" d="M5 41 C24 13 56 13 76 39" marker-end="url(#arrowhead)"></path>
+            <path class="transition-line" d="M5 47 C23 18 57 16 82 37"></path>
+            <path class="transition-line transition-echo" d="M7 50 C27 22 59 19 84 40"></path>
+            <path class="transition-line transition-head" d="M72 34 Q80 37 84 43 Q84 36 91 32"></path>
           </svg>
-          <span>ADD THE<br>RESEARCH</span>
+          <span class="transition-label">ADD THE<br>RESEARCH PROJECT</span>
         </div>
 
         <article class="resume-side resume-side-after">
