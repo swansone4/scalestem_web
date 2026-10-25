@@ -4,83 +4,89 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f2f4fc">
-  <meta name="description" content="ScaleSTEM is a computational research community helping undergraduate students access STEM research experience, mentorship, and career-ready skills.">
-  <title>ScaleSTEM Computational Research Community</title>
+  <meta name="description" content="ScaleSTEM guides students from a career goal through a computational research project, with mentor feedback and work they can show.">
+  <title>ScaleSTEM — Build work that moves you forward</title>
   <link rel="stylesheet" href="/styles.css">
   <script defer src="/app.js"></script>
 </head>
 <body>
-  <header class="site-header" id="home">
-    <a class="brand" href="#home" aria-label="ScaleSTEM home">ScaleSTEM<br>Computational<br>Research Community</a>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="ScaleSTEM home">Scale<span>STEM</span></a>
+    <nav class="nav" aria-label="Main navigation"><a href="#journey">The journey</a><a href="#outcomes">What you build</a><a class="nav-apply" href="#apply">Apply for a future cohort <span>↗</span></a></nav>
     <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
-    <nav class="nav" aria-label="Main navigation">
-      <a href="#home">Home</a><a href="#about">About us</a><a href="#apply">Apply now</a><a href="#journal">Journal</a><a href="#mentors">Be a TA/Mentor</a><a href="#contact">Talk to us</a>
-    </nav>
   </header>
+
   <main>
     <section class="hero">
-      <p class="eyebrow">COMPUTATIONAL RESEARCH COMMUNITY</p>
-      <h1>Build your path<br>into STEM <em>research.</em></h1>
-      <p class="hero-lede">You’re a first-generation student, or hail from a university with an under-resourced STEM department. Internships and fellowships are competitive and often seem to demand prior experience. Sound familiar? ScaleSTEM aims to break this cycle.</p>
-      <a class="button" href="#apply">Register interest for a future cohort <span aria-hidden="true">↓</span></a>
-      <img class="hero-image" src="/images/research-library.png" alt="University research library framed by trees">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="eyebrow-mark"></span> SCALESTEM / COMPUTATIONAL RESEARCH</p>
+        <h1>Build work<br>that moves you<br><em>forward.</em></h1>
+        <p class="hero-lede">Start with the role you want. Follow a guided, mentored research process. Leave with a project, a technical document, and a clearer way to show what you can do.</p>
+        <a class="button" href="#journey">See the three-month journey <span>↓</span></a>
+        <p class="hero-note">A guided computational research experience for students.</p>
+      </div>
+      <div class="hero-visual reveal" aria-label="Illustrative resume transformation for a modeling and simulation role">
+        <div class="visual-label"><span class="live-dot"></span> ONE GOAL. THREE MONTHS OF BUILDING.</div>
+        <div class="resume-stage">
+          <article class="resume resume-before">
+            <div class="resume-top"><span>PROFILE / BEFORE</span><span class="resume-page">01</span></div>
+            <div class="resume-name">Alex Morgan</div><div class="resume-role">TARGET ROLE<br><strong>MODELING &amp; SIMULATION</strong></div>
+            <div class="resume-rule"></div><div class="resume-section-label">PROJECT EXPERIENCE</div>
+            <div class="resume-placeholder"><span></span><span></span><span class="short"></span></div>
+            <div class="gap-note"><span>!</span><span><strong>Evidence gap</strong><br>No modeling project to show yet</span></div>
+            <div class="decision-stamp">NOT<br>SELECTED</div>
+          </article>
+          <svg class="sketch-arrow" viewBox="0 0 118 100" aria-hidden="true"><path d="M7 52 C34 18 73 22 99 46 C104 51 107 55 108 61 M88 44 Q99 47 109 61 Q99 65 93 73"/></svg>
+          <article class="resume resume-after">
+            <div class="resume-top"><span>PROFILE / AFTER SCALESTEM</span><span class="resume-page">02</span></div>
+            <div class="resume-name">Alex Morgan</div><div class="resume-role">TARGET ROLE<br><strong>MODELING &amp; SIMULATION</strong></div>
+            <div class="resume-rule"></div><div class="resume-section-label">RESEARCH PROJECT</div>
+            <div class="resume-bullet"><span class="bullet-dot"></span><p>Built and evaluated a computational model of <mark>[system]</mark>, documenting assumptions, methods, and results.</p></div>
+            <div class="resume-proof"><span>PROJECT</span><span>TECHNICAL REPORT</span><span>MENTOR FEEDBACK</span></div>
+            <div class="after-tag"><span>↗</span> NEW EVIDENCE</div>
+          </article>
+        </div>
+        <p class="visual-disclaimer">Illustrative example. Projects and outcomes are shaped with each student.</p>
+      </div>
+      <a class="scroll-cue" href="#journey"><span></span> SCROLL TO SEE HOW IT BUILDS</a>
     </section>
 
-    <section class="mission section" id="about">
-      <div class="section-image mission-image" role="img" aria-label="A campus walkway framed by trees"></div>
-      <div class="paper-card mission-card">
-        <p class="eyebrow">ABOUT SCALESTEM</p>
-        <h2>Our mission</h2>
-        <p>It is evident that undergraduate students who participate in research are not only more likely to graduate but also have greater career outcomes and employment opportunities. Unfortunately, for many students, especially those at under-resourced institutions, it is virtually impossible to capitalize on these valuable research opportunities. There exists also a massive information deficit and accessibility gap that leaves talent behind. ScaleSTEM exists to break the mold and bridge the divide—empowering STEM students nationwide by providing equitable mentorship, research experience, and career-ready skills needed to launch into next-generation careers.</p>
-        <a class="button" href="#methodology">How we work <span aria-hidden="true">↓</span></a>
+    <section class="journey section" id="journey">
+      <div class="section-heading reveal"><p class="eyebrow">THE SCALESTEM PROCESS / ABOUT 3 MONTHS</p><h2>One step at a time.<br><em>A project that’s yours.</em></h2><p>Move from a career direction to a researched, reviewed, and presentable piece of work.</p></div>
+      <div class="journey-layout reveal">
+        <div class="month-nav" role="tablist" aria-label="Three-month project timeline">
+          <button class="month-tab active" id="month-1" role="tab" aria-selected="true" data-month="0"><span>01</span><span><small>MONTH ONE</small><strong>Find the question</strong></span><i>↗</i></button>
+          <button class="month-tab" id="month-2" role="tab" aria-selected="false" data-month="1"><span>02</span><span><small>MONTH TWO</small><strong>Build the model</strong></span><i>↗</i></button>
+          <button class="month-tab" id="month-3" role="tab" aria-selected="false" data-month="2"><span>03</span><span><small>MONTH THREE</small><strong>Review &amp; present</strong></span><i>↗</i></button>
+          <div class="month-line"><span></span></div>
+        </div>
+        <article class="month-panel" role="tabpanel" aria-labelledby="month-1" aria-live="polite">
+          <div class="panel-top"><span class="panel-index">01 / DEFINE</span><span class="panel-orbit" aria-hidden="true">◎</span></div>
+          <h3 data-panel-title>Connect the role to a research question.</h3>
+          <p data-panel-copy>Clarify the skills your target path calls for, choose a computational question, and shape a realistic project with your mentor.</p>
+          <div class="panel-output"><span>YOU’RE BUILDING</span><strong data-panel-output>A focused question + project plan</strong><span class="output-arrow">↗</span></div>
+          <div class="panel-grid" aria-hidden="true"></div>
+        </article>
       </div>
+      <div class="journey-foot"><span>MENTOR GUIDANCE THROUGHOUT</span><span class="foot-rule"></span><span>YOUR INTERESTS SET THE DIRECTION</span></div>
     </section>
 
-    <section class="methodology section" id="methodology">
-      <div class="method-intro paper-card">
-        <p class="eyebrow">HOW WE WORK</p>
-        <h2>Our methodology</h2>
-        <p>So, how do we build that bridge? What do we provide for students that work with us? Our methodology is multi-step, and highly personalized due to the uniqueness of every academic situation and career trajectory.</p>
+    <section class="outcomes section" id="outcomes">
+      <div class="outcomes-heading reveal"><p class="eyebrow">WHAT YOU CAN TAKE WITH YOU</p><h2>Make the work<br><em>easy to see.</em></h2><p>The project is the experience. The report and resume bullet help you communicate it.</p></div>
+      <div class="artifact-stack reveal">
+        <article class="artifact artifact-main"><span class="artifact-count">01 / RESUME</span><div class="artifact-icon">↗</div><h3>A high-signal project bullet.</h3><p>Describe the model you built, the methods you used, and what you learned—tailored to the roles you’re pursuing.</p><div class="bullet-example">“Developed a computational model of <mark>[system]</mark>; evaluated <mark>[question]</mark> and documented findings.”</div></article>
+        <article class="artifact artifact-side"><span class="artifact-count">02 / TECHNICAL DOCUMENT</span><div class="doc-lines"><i></i><i></i><i></i><i></i><i></i></div><h3>A reviewed technical write-up.</h3><p>Build a written record of your question, approach, analysis, and results with mentor and graduate-student feedback.</p></article>
+        <article class="artifact artifact-side"><span class="artifact-count">03 / PROJECT</span><div class="model-icon"><span></span><span></span><span></span><span></span></div><h3>A project you can discuss.</h3><p>Explain the problem, your modeling choices, and how you approached the work.</p></article>
       </div>
-      <div class="program-overview">
-        <p class="eyebrow">THE PROGRAM</p>
-        <p>ScaleSTEM follows an alternating cohort model of 8–12 week periods. Every student is paired with a STEM mentor who is either a graduate student, an industry professional, or a professor/academic. The goal of the program is to develop a research project, publish a technical report to the ScaleSTEM Research Journal, and present to a virtual symposium. This pipeline is designed to emulate the traditional research path as much as possible.</p>
-      </div>
-      <div class="steps">
-        <article class="step"><div class="step-number">01</div><div><h3>Career path identification</h3><p>Every student begins by addressing the essential question: <em>“What do I want to do?”</em> At ScaleSTEM, we will guide STEM undergraduates interested in pursuing industry roles, R&amp;D roles, and academic positions. Students will fill out a questionnaire and consult with mentors to help remove uncertainty.</p></div><div class="step-art art-path" aria-hidden="true">?</div></article>
-        <article class="step"><div class="step-number">02</div><div><h3>Mentor pairing</h3><p>Students are paired with a STEM mentor to specify a research project and set realistic goals.</p></div><div class="step-art art-mentor" aria-hidden="true">↔</div></article>
-        <article class="step"><div class="step-number">03</div><div><h3>Video module advancement</h3><p>Research skills—academic communication, slide formats, presentation skills, literature review protocols, and scientific writing—are essential for success. Our curated video series advances chronologically and includes follow-up questions and notes for your aide.</p></div><div class="step-art art-video" aria-hidden="true">▶</div></article>
-        <article class="step"><div class="step-number">04</div><div><h3>Research project creation</h3><p>As you advance through the videos and network with your mentor, you will decide upon a research project, conduct a literature review, acquire the necessary technical knowledge, and begin making progress. For example, an undergraduate interested in nuclear engineering may begin developing a GitHub codebase for a real-time Monte Carlo reactor core simulator.</p></div><div class="step-art art-project" aria-hidden="true">⌘</div></article>
-        <article class="step"><div class="step-number">05</div><div><h3>Research report &amp; symposium</h3><p>Students work toward a technical report for the ScaleSTEM Research Journal and present their project at a virtual symposium.</p></div><div class="step-art art-share" aria-hidden="true">↗</div></article>
-      </div>
+      <p class="outcomes-note reveal">Projects and resume language are examples; each student’s work and results will differ. ScaleSTEM does not guarantee a job or admission outcome.</p>
     </section>
 
-    <section class="application section" id="apply">
-      <div class="application-banner"><p class="eyebrow">PROSPECTIVE STUDENTS</p><h2>Research project creation</h2><h3>Register your interest in a future cohort</h3><p>Use this short form to tell us about yourself and your goals. This is an expression of interest; cohort timing and placement are not yet confirmed.</p></div>
-      <div class="application-content">
-        <div><p class="eyebrow">YOUR FIRST STEP</p><h3>Tell us what you’d like to explore.</h3><p>Share your contact information, academic background, and research interests. When you submit, your email app will open a message for you to review and send to ScaleSTEM.</p><p class="small-note">The form does not send or store information automatically.</p></div>
-        <form class="contact-form" data-mailto-form>
-          <label>Your name<input name="name" autocomplete="name" required></label>
-          <label>Email address<input name="email" type="email" autocomplete="email" required></label>
-          <label>College or university<input name="school" autocomplete="organization"></label>
-          <label>STEM interests<input name="interest" placeholder="Topics or questions you want to explore" required></label>
-          <label class="wide">A little about your goals<textarea name="message" rows="4" required></textarea></label>
-          <button class="button" type="submit">Prepare my interest email <span aria-hidden="true">↗</span></button>
-          <p class="small-note wide" data-form-status role="status" aria-live="polite">Your email app opens so you can review and send your message.</p>
-        </form>
-      </div>
-    </section>
-
-    <section class="journal section" id="journal">
-      <div class="journal-image" role="img" aria-label="Scientific research in progress"></div>
-      <div class="paper-card journal-card"><p class="eyebrow">A FUTURE HOME FOR STUDENT WORK</p><h2>ScaleSTEM Research Journal</h2><p>Currently a work in progress. We hope to start building out our own research journal with student projects and technical reports.</p></div>
-    </section>
-
-    <section class="mentor-contact section" id="mentors">
-      <div class="mentor-copy"><p class="eyebrow">BE A TA / MENTOR</p><h2>Help students flourish.</h2><p>Being a mentor is a serious, committed undertaking, but also very enriching and fulfilling. We actively welcome mentors who want to help students flourish and reach their goals.</p><a class="button" href="mailto:scalestem@gmail.com?subject=ScaleSTEM%20mentor%20interest">Email about mentoring <span aria-hidden="true">↗</span></a></div>
-      <div class="contact-copy" id="contact"><p class="eyebrow">TALK TO US</p><h2>Questions?</h2><p>We’d be glad to hear from prospective students, mentors, and collaborators.</p><a class="contact-email" href="mailto:scalestem@gmail.com">scalestem@gmail.com <span aria-hidden="true">↗</span></a></div>
+    <section class="apply-section" id="apply">
+      <div class="apply-inner reveal"><p class="eyebrow">PROSPECTIVE COHORT</p><h2>Start with what<br>you want to <em>do.</em></h2><p>Register your interest in a future ScaleSTEM cohort. Share your target direction and what you’d like to build.</p><p class="apply-note">No launch date is confirmed. This is an expression of interest, not a placement.</p></div>
+      <form class="interest-form reveal" data-mailto-form><label>Your name<input name="name" autocomplete="name" required placeholder="Name"></label><label>Email<input name="email" type="email" autocomplete="email" required placeholder="you@example.com"></label><label>Target role or research interest<input name="target" required placeholder="e.g. modeling-based systems engineering"></label><button class="button button-light" type="submit">Register interest <span>↗</span></button><p class="form-status" data-form-status role="status" aria-live="polite">Opens an email draft for you to review and send.</p></form>
     </section>
   </main>
-  <footer class="site-footer"><a class="brand" href="#home">ScaleSTEM<br>Computational<br>Research Community</a><p>Scaling the next generation of STEM talent.</p><span>© 2026 ScaleSTEM</span></footer>
+
+  <footer class="site-footer"><a class="brand" href="#top">Scale<span>STEM</span></a><span>COMPUTATIONAL RESEARCH COMMUNITY</span><a href="mailto:scalestem@gmail.com">scalestem@gmail.com ↗</a></footer>
 </body>
 </html>

@@ -16,12 +16,8 @@ Open [http://localhost:4173](http://localhost:4173). Set `PORT` to use another p
 
 The static site in `public/` can be served by any static web host. For a persistent Node host, run `npm start`; it listens on `PORT` and binds to `0.0.0.0`.
 
-## Homepage sections
+## Homepage
 
-- Mission
-- Program methodology
-- Prospective student interest form
-- Research journal (work in progress)
-- TA/mentor interest and contact
+The homepage shows an illustrative resume transformation, an interactive three-month project timeline, and three outcomes: a project bullet, a technical write-up developed with mentor/graduate-student feedback, and a project the student can discuss. Examples are illustrative; individual project results will vary.
 
-The student form validates in the browser and opens a pre-filled email addressed to `scalestem@gmail.com` for the visitor to review and send. Nothing is sent automatically or stored by this site. The form registers interest in a future cohort; timing and placement are not confirmed.
+The interest form validates in the browser and opens a pre-filled email addressed to `scalestem@gmail.com` for the visitor to review and send. Nothing is sent automatically or stored by this site. The form registers interest in a future cohort; timing and placement are not confirmed. The site does not guarantee employment or admission outcomes.
