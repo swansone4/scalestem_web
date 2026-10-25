@@ -18,7 +18,7 @@ The static site in `public/` can be served by any static web host. For a persist
 
 ## Homepage
 
-The homepage follows the pathway from a student questionnaire, through a three-month learning and research project, to applying with stronger evidence. It compares two complete sample resumes, highlights the added project and modeling skills, and lets visitors inspect either resume on hover or keyboard focus. The fictional before/after resume is also typeset in LaTeX in `resume-example/main.tex`.
+The homepage identifies the evidence gap in a crowded job search, then shows how a student questionnaire and three-month learning and research project can help address it. An animated, clearly labeled illustration shows outgoing applications and generic inbox replies; it does not represent real application data. The page compares two complete sample resumes, highlights the added project and modeling skills, and lets visitors inspect either resume on hover or keyboard focus. The fictional before/after resume is also typeset in LaTeX in `resume-example/main.tex`.
 
 The process and examples describe the intended experience. Project results vary, and the site does not guarantee employment or admission.
 

@@ -27,6 +27,82 @@ if ('IntersectionObserver' in window) {
   document.querySelectorAll('.resume-section, .pipeline').forEach((element) => observer.observe(element));
 }
 
+const simulation = document.querySelector('[data-application-sim]');
+const count = simulation?.querySelector('[data-application-count]');
+const replayButton = simulation?.querySelector('[data-replay-simulation]');
+let countFrame = 0;
+let countInterval = 0;
+let simulationVisible = false;
+let simulationStarted = false;
+const reduceSimulationMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function stopOngoingCount() {
+  if (!countInterval) return;
+  window.clearInterval(countInterval);
+  countInterval = 0;
+}
+
+function startOngoingCount() {
+  if (!count || countInterval || reduceSimulationMotion || !simulationVisible) return;
+  countInterval = window.setInterval(() => {
+    count.textContent = String(Number(count.textContent) + 1);
+  }, 1400);
+}
+
+function playApplicationSimulation() {
+  if (!simulation || !count) return;
+  if (countFrame) cancelAnimationFrame(countFrame);
+  stopOngoingCount();
+  simulation.classList.remove('is-running');
+  count.textContent = '0';
+  void simulation.offsetWidth;
+  simulation.classList.add('is-running');
+
+  const target = 28;
+  if (reduceSimulationMotion) {
+    count.textContent = String(target);
+    return;
+  }
+
+  const start = performance.now();
+  const duration = 2400;
+  function updateCount(now) {
+    const progress = Math.min((now - start) / duration, 1);
+    const eased = 1 - (1 - progress) ** 3;
+    count.textContent = String(Math.round(target * eased));
+    if (progress < 1) countFrame = requestAnimationFrame(updateCount);
+    else {
+      countFrame = 0;
+      startOngoingCount();
+    }
+  }
+  countFrame = requestAnimationFrame(updateCount);
+}
+
+if (simulation && count) {
+  count.textContent = '28';
+  if ('IntersectionObserver' in window) {
+    const simulationObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        simulationVisible = entry.isIntersecting;
+        if (simulationVisible && !simulationStarted) {
+          simulationStarted = true;
+          playApplicationSimulation();
+        } else if (simulationVisible && !countFrame) startOngoingCount();
+        else if (!simulationVisible) stopOngoingCount();
+      });
+    }, { threshold: 0.25 });
+    simulationObserver.observe(simulation);
+  } else {
+    simulationVisible = true;
+  }
+
+  replayButton?.addEventListener('click', () => {
+    simulationStarted = true;
+    playApplicationSimulation();
+  });
+}
+
 document.querySelector('[data-mailto-form]')?.addEventListener('submit', (event) => {
   event.preventDefault();
   const form = event.currentTarget;
