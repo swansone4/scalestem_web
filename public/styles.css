@@ -44,6 +44,7 @@ a:hover .arrow-circle, button:hover .arrow-circle { transform: translate(3px, -2
 .problem-heading .eyebrow { margin-bottom: 16px; }
 .problem-heading h1 { margin: 0; font: 300 clamp(48px, 6vw, 76px)/1.02 var(--serif); letter-spacing: -.045em; }
 .problem-heading h1 em { color: var(--accent); font-weight: 300; }
+.problem-heading h1 .problem-result { color: #c43d32; }
 .problem-heading>p:last-child { max-width: 680px; margin: 19px 0 0; color: #53514c; font-size: 15px; line-height: 1.7; }
 .application-simulation { min-width: 0; overflow: hidden; border: 1px solid #d4d7dd; border-radius: 11px; background: #fff; box-shadow: 0 16px 44px rgba(29, 42, 65, .10); }
 .desktop-chrome { height: 35px; display: grid; grid-template-columns: 1fr minmax(140px, 2fr) 1fr; align-items: center; padding: 0 15px; background: #f6f7f9; border-bottom: 1px solid #e0e3e8; color: #737982; }
