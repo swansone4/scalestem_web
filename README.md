@@ -18,7 +18,9 @@ The static site in `public/` can be served by any static web host. For a persist
 
 ## Homepage
 
-The homepage identifies the evidence gap in a crowded job search, then shows how a student questionnaire and three-month learning and research project can help address it. An animated, clearly labeled illustration shows outgoing applications and generic inbox replies; it does not represent real application data. The page compares two complete sample resumes, highlights the added project and modeling skills, and lets visitors inspect either resume on hover or keyboard focus. The fictional before/after resume is also typeset in LaTeX in `resume-example/main.tex`.
+The homepage leads with the job-search evidence gap, then shows the solution in a before/after resume comparison. A clearly labeled, animated mock desktop pairs a job application tracker with a Gmail-style inbox and local LinkedIn and Indeed logo files. Its applications and emails are fictional; the mockup is not connected to any of those services. The page highlights the added project and modeling skills, and lets visitors inspect either resume on hover or keyboard focus. The fictional before/after resume is also typeset in LaTeX in `resume-example/main.tex`.
+
+The locally served LinkedIn and Indeed SVG assets are sourced from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Linkedin-logo-blue-In-square-40px.svg) and [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Indeed_logo.svg). Their respective brand marks remain the property of their owners.
 
 The process and examples describe the intended experience. Project results vary, and the site does not guarantee employment or admission.
 

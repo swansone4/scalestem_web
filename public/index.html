@@ -22,54 +22,71 @@
   </header>
 
   <main>
-    <section class="hero page-width" aria-labelledby="hero-title">
-      <div class="hero-index"><span>000/</span><span>SCALESTEM</span></div>
-      <div class="hero-copy">
-        <h1 id="hero-title">Build research that strengthens your next <em>application.</em></h1>
-        <p>Choose the roles you want. Build a mentored computational research project that gives you work, methods, and a technical report to show for it.</p>
-        <div class="hero-actions">
-          <a class="button button-ink" href="#process">See the pathway <span class="arrow-circle" aria-hidden="true">↘</span></a>
-          <a class="text-link" href="#resume-example">See the resume change</a>
-        </div>
-      </div>
-    </section>
-
     <section class="problem-section" id="problem" aria-labelledby="problem-title">
       <div class="problem-inner page-width">
         <div class="problem-heading">
           <p class="eyebrow"><span>001/</span> THE PROBLEM</p>
-          <h2 id="problem-title">More applications.<br>The same <em>evidence gap.</em></h2>
+          <h1 id="problem-title">More applications.<br>The same <em>evidence gap.</em></h1>
           <p>When a resume has no project related to the role, it is harder to show how your skills fit. Sending more applications does not add that missing evidence.</p>
         </div>
 
-        <div class="application-simulation" data-application-sim role="region" aria-label="Illustrative job application and inbox simulation">
-          <div class="simulation-topline"><span class="simulation-index">A SIMULATED JOB SEARCH</span><span class="simulation-state"><i aria-hidden="true"></i> IN MOTION</span></div>
+        <div class="application-simulation" id="search-simulation" data-application-sim role="region" aria-label="Illustrative job application tracker and Gmail-style inbox">
+          <div class="desktop-chrome" aria-hidden="true"><span class="window-dots"><i></i><i></i><i></i></span><span class="window-address">scalestem.local / job search</span><span class="window-menu">•••</span></div>
           <div class="simulation-grid">
-            <div class="application-panel">
-              <div class="panel-heading"><span>APPLICATIONS SENT</span><span>01 / OUTGOING</span></div>
-              <div class="count-row"><strong data-application-count aria-hidden="true">28</strong><span class="count-plus" aria-hidden="true">+</span><span class="count-label">applications<br>and counting</span></div>
-              <div class="platforms" aria-label="Example application sources"><span>LinkedIn</span><span>Indeed</span><span>Company sites</span></div>
+            <section class="application-panel" aria-label="Application tracker illustration">
+              <div class="tracker-topbar"><div class="tracker-brand"><span class="tracker-mark" aria-hidden="true">S</span><span>Application tracker</span></div><span class="demo-tag">STUDENT VIEW · DEMO</span></div>
+              <div class="application-summary"><div><span class="summary-label">APPLICATIONS SENT</span><div class="count-row"><strong data-application-count aria-hidden="true">28</strong><span class="count-plus" aria-hidden="true">+</span><span class="count-label">and counting</span></div></div><span class="tracker-trend">↗ Active search</span></div>
+              <p class="platform-heading">APPLICATION SOURCES</p>
+              <div class="platforms" aria-label="Example sources: LinkedIn and Indeed">
+                <span class="platform-chip"><img src="/assets/linkedin.svg" alt=""><span>LinkedIn</span></span>
+                <span class="platform-chip platform-chip-indeed"><img src="/assets/indeed.svg" alt="Indeed"></span>
+                <span class="platform-chip platform-chip-other">Company sites</span>
+              </div>
+              <div class="list-heading"><span>RECENT APPLICATIONS</span><span>STATUS</span></div>
               <div class="application-list">
-                <article class="job-row"><span class="row-number">01</span><div><strong>Modeling Engineer</strong><small>Company 01 · submitted</small></div><span class="sent-label">SENT</span></article>
-                <article class="job-row"><span class="row-number">02</span><div><strong>Simulation Intern</strong><small>Company 02 · submitted</small></div><span class="sent-label">SENT</span></article>
-                <article class="job-row"><span class="row-number">03</span><div><strong>Systems Analyst</strong><small>Company 03 · submitted</small></div><span class="sent-label">SENT</span></article>
-                <article class="job-row"><span class="row-number">04</span><div><strong>Research Associate</strong><small>Company 04 · submitted</small></div><span class="sent-label">SENT</span></article>
+                <article class="job-row"><span class="job-source-mark"><img src="/assets/linkedin.svg" alt=""></span><div><strong>Modeling Engineer</strong><small>Company 01 · LinkedIn</small></div><span class="status-label status-pending">No reply</span></article>
+                <article class="job-row"><span class="job-source-mark job-source-indeed"><img src="/assets/indeed.svg" alt=""></span><div><strong>Simulation Intern</strong><small>Company 02 · Indeed</small></div><span class="status-label status-rejected">Not selected</span></article>
+                <article class="job-row"><span class="job-source-mark"><img src="/assets/linkedin.svg" alt=""></span><div><strong>Systems Analyst</strong><small>Company 03 · LinkedIn</small></div><span class="status-label status-pending">Submitted</span></article>
+                <article class="job-row"><span class="job-source-mark job-source-indeed"><img src="/assets/indeed.svg" alt=""></span><div><strong>Research Associate</strong><small>Company 04 · Indeed</small></div><span class="status-label status-review">In review</span></article>
               </div>
-            </div>
-            <div class="reply-panel">
-              <div class="panel-heading"><span>THE INBOX</span><span>02 / REPLIES</span></div>
-              <div class="reply-list">
-                <article class="reply-card"><div class="reply-meta"><span>COMPANY 02</span><span>NOT SELECTED</span></div><p>Thank you for applying. We have decided to move forward with another candidate.</p></article>
-                <article class="reply-card"><div class="reply-meta"><span>COMPANY 04</span><span>UNDER REVIEW</span></div><p>Your application is with our team. We will be in touch if there is a match.</p></article>
-                <article class="reply-card"><div class="reply-meta"><span>COMPANY 01</span><span>NO RESPONSE</span></div><p>Application submitted. No update yet.</p></article>
+            </section>
+
+            <section class="reply-panel" aria-label="Illustrative Gmail inbox">
+              <header class="gmail-topbar">
+                <span class="gmail-menu" aria-hidden="true">☰</span>
+                <span class="gmail-brand"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M5 13.2 24 27.5l19-14.3V39a4 4 0 0 1-4 4h-2V19.1L24 31 11 19.1V43H9a4 4 0 0 1-4-4V13.2Z"/><path fill="#EA4335" d="M5 13.2V11a4 4 0 0 1 6.4-3.2L24 17.5l12.6-9.7A4 4 0 0 1 43 11v2.2L24 27.5 5 13.2Z"/><path fill="#34A853" d="M5 13.2 11 17.7V43H9a4 4 0 0 1-4-4V13.2Z"/><path fill="#FBBC04" d="M37 17.7 43 13.2V39a4 4 0 0 1-4 4h-2V17.7Z"/></svg><span>Gmail</span></span>
+                <div class="gmail-search"><span class="search-icon" aria-hidden="true"></span><span>Search mail</span><span class="search-options" aria-hidden="true">☷</span></div>
+                <div class="gmail-tools"><span aria-hidden="true">?</span><span aria-hidden="true">⚙</span><span class="gmail-avatar" aria-label="Demo student account">J</span></div>
+              </header>
+              <div class="gmail-body">
+                <aside class="gmail-sidebar" aria-label="Gmail folders">
+                  <div class="compose-button"><span aria-hidden="true">✎</span>Compose</div>
+                  <div class="gmail-folder gmail-folder-active"><span aria-hidden="true">▣</span><strong>Inbox</strong><b>28</b></div>
+                  <div class="gmail-folder"><span aria-hidden="true">☆</span>Starred</div>
+                  <div class="gmail-folder"><span aria-hidden="true">◷</span>Snoozed</div>
+                  <div class="gmail-folder"><span aria-hidden="true">➤</span>Sent</div>
+                  <div class="gmail-folder"><span aria-hidden="true">▱</span>Drafts</div>
+                  <div class="gmail-label-heading">Labels <span>＋</span></div>
+                  <div class="gmail-folder gmail-label"><span aria-hidden="true">◆</span>Job applications</div>
+                </aside>
+                <div class="gmail-inbox">
+                  <div class="gmail-toolbar"><div class="gmail-toolbar-actions"><span class="checkbox-icon" aria-hidden="true"></span><span>⌄</span><span>↻</span><span>⋮</span></div><span>1–3 of 28&nbsp; ‹ &nbsp;›</span></div>
+                  <div class="gmail-tabs"><span class="gmail-tab-active"><i aria-hidden="true">▣</i>Primary</span><span><i aria-hidden="true">▰</i>Promotions</span><span><i aria-hidden="true">♧</i>Social</span></div>
+                  <div class="reply-list">
+                    <article class="email-row"><span class="email-checkbox" aria-hidden="true"></span><span class="email-star" aria-hidden="true">☆</span><strong class="email-sender">Company 02</strong><div class="email-subject"><strong>Update on your application</strong><span> — Thank you for applying. We have decided to move forward with another candidate.</span></div><time>10:42 AM</time></article>
+                    <article class="email-row"><span class="email-checkbox" aria-hidden="true"></span><span class="email-star" aria-hidden="true">☆</span><strong class="email-sender">Company 04</strong><div class="email-subject"><strong>Your application is under review</strong><span> — Your application is with our team. We will be in touch if there is a match.</span></div><time>Yesterday</time></article>
+                    <article class="email-row"><span class="email-checkbox" aria-hidden="true"></span><span class="email-star" aria-hidden="true">☆</span><strong class="email-sender">Company 01</strong><div class="email-subject"><strong>Application received: Modeling Engineer</strong><span> — We received your application. You will hear from us if there is an update.</span></div><time>Oct 21</time></article>
+                  </div>
+                  <div class="gmail-empty-state"><span>↘</span> One application is still waiting for a reply.</div>
+                </div>
               </div>
-            </div>
+            </section>
           </div>
-          <div class="simulation-footer"><p>ILLUSTRATIVE EXAMPLE · NOT REAL APPLICATION DATA</p><button type="button" data-replay-simulation>Replay the example <span aria-hidden="true">↻</span></button></div>
+          <div class="simulation-footer"><p>ILLUSTRATIVE MOCKUP · FICTIONAL ACTIVITY · NOT CONNECTED TO THESE SERVICES</p><button type="button" data-replay-simulation>Replay the sequence <span aria-hidden="true">↻</span></button></div>
           <p class="visually-hidden">Illustration only. Applications accumulate while inbox replies show a rejection, an application under review, and no response.</p>
         </div>
 
-        <div class="problem-bridge"><p>ScaleSTEM addresses the evidence gap with a guided computational research project.</p><a href="#resume-example">See the solution <span aria-hidden="true">↓</span></a></div>
+        <div class="problem-bridge"><p><strong>The solution: turn your direction into real project evidence.</strong> Build a mentored computational research project and a reviewed technical report you can explain to employers.</p><a href="#resume-example">See the resume change <span aria-hidden="true">↓</span></a></div>
       </div>
     </section>
 
@@ -77,7 +94,7 @@
       <div class="resume-intro page-width">
         <p class="eyebrow"><span>002/</span> THE SOLUTION</p>
         <h2 id="resume-title">Show the difference<br>one project can <em>make.</em></h2>
-        <p>The same illustrative student, before and after a ScaleSTEM computational research project. Hover or focus either page to inspect it.</p>
+        <p>Choose the roles you want, then build the methods and mentored computational project to support your next application. The resumes below show one fictional example of what that evidence could look like. Hover or focus either page to inspect it.</p>
       </div>
 
       <div class="resume-comparison page-width">
