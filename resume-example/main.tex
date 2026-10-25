@@ -1,0 +1,95 @@
+\documentclass[10pt]{article}
+\usepackage[letterpaper,margin=0.58in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{microtype}
+\definecolor{ink}{HTML}{1A1A18}
+\definecolor{blue}{HTML}{2F4B7C}
+\definecolor{muted}{HTML}{6E6B64}
+\hypersetup{colorlinks=true,urlcolor=blue}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\setlist[itemize]{leftmargin=1.25em,topsep=2pt,itemsep=1.5pt,parsep=0pt}
+\newcommand{\resumehead}{%
+  {\LARGE\bfseries Jordan Lee}\hfill{\small Denver, CO}\\[-1pt]
+  {\normalsize Modeling \& Simulation Engineering}\hfill
+  {\small \href{mailto:jordan.lee@example.edu}{jordan.lee@example.edu} \,|\, github.com/jordanlee}\\[3pt]
+  \color{blue}\rule{\linewidth}{0.7pt}\color{ink}\\[-2pt]
+}
+\newcommand{\sectiontitle}[1]{\vspace{6pt}{\small\bfseries\MakeUppercase{#1}}\par\vspace{1pt}\color{blue}\rule{\linewidth}{0.35pt}\color{ink}\vspace{1pt}}
+\newcommand{\entry}[2]{\textbf{#1}\hfill{\small #2}\par}
+\newcommand{\resumefooter}[1]{\vfill{\scriptsize\color{muted}ILLUSTRATIVE SAMPLE / #1}\hfill{\scriptsize\color{muted}FOR DESIGN DEMONSTRATION}}
+\begin{document}
+\color{ink}
+\resumehead
+\sectiontitle{Education}
+\entry{B.S. Mechanical Engineering, Western Plains University}{Expected May 2027}
+{\small GPA: 3.62/4.00 \quad Relevant coursework: Numerical Methods, Dynamics, Thermodynamics, Linear Algebra}
+
+\sectiontitle{Research Experience}
+\entry{Undergraduate Lab Assistant, Energy Systems Lab}{Aug 2025 to Present}
+\begin{itemize}
+\item Prepare sensor assemblies and organize experimental readings for weekly lab review.
+\item Maintain reproducible lab notes and create plots from collected datasets in Python and MATLAB.
+\end{itemize}
+
+\sectiontitle{Selected Projects}
+\entry{Microcontroller Temperature Logger, Coursework}{Fall 2025}
+\begin{itemize}
+\item Built an Arduino based temperature logger and summarized readings across a short lab study.
+\end{itemize}
+\entry{Mechanism Design Study, Engineering Design Course}{Spring 2025}
+\begin{itemize}
+\item Modeled a linkage assembly in SolidWorks and documented design constraints for a class review.
+\end{itemize}
+
+\sectiontitle{Technical Skills}
+\textbf{Programming:} Python, MATLAB, C++ \qquad \textbf{Tools:} Git, Jupyter, SolidWorks\\
+\textbf{Methods:} Data cleaning, visualization, laboratory documentation
+
+\sectiontitle{Campus Involvement}
+\entry{Peer Tutor, Engineering Learning Center}{2025 to Present}
+{\small Support first-year students in statics and introductory programming through weekly drop-in sessions.}
+\resumefooter{BEFORE SCALESTEM}
+
+\newpage
+\resumehead
+\sectiontitle{Education}
+\entry{B.S. Mechanical Engineering, Western Plains University}{Expected May 2027}
+{\small GPA: 3.62/4.00 \quad Relevant coursework: Numerical Methods, Dynamics, Thermodynamics, Linear Algebra}
+
+\sectiontitle{Research Experience}
+\entry{Undergraduate Lab Assistant, Energy Systems Lab}{Aug 2025 to Present}
+\begin{itemize}
+\item Prepare sensor assemblies and organize experimental readings for weekly lab review.
+\item Maintain reproducible lab notes and create plots from collected datasets in Python and MATLAB.
+\end{itemize}
+
+\sectiontitle{Selected Projects}
+\entry{Computational Thermal Systems Project, ScaleSTEM Guided Research}{3 months}
+\begin{itemize}
+\item Developed a Python thermal network model for a compact heat exchanger; compared predicted outlet temperatures under changing flow conditions.
+\item Documented model assumptions, validation checks, scenario analysis, and findings in a technical report reviewed with mentor and graduate student feedback.
+\end{itemize}
+\entry{Microcontroller Temperature Logger, Coursework}{Fall 2025}
+\begin{itemize}
+\item Built an Arduino based temperature logger and summarized readings across a short lab study.
+\end{itemize}
+\entry{Mechanism Design Study, Engineering Design Course}{Spring 2025}
+\begin{itemize}
+\item Modeled a linkage assembly in SolidWorks and documented design constraints for a class review.
+\end{itemize}
+
+\sectiontitle{Technical Skills}
+\textbf{Programming:} Python, MATLAB, C++ \qquad \textbf{Tools:} Git, Jupyter, SolidWorks\\
+\textbf{Modeling:} Thermal network simulation, parameter sweeps \qquad \textbf{Methods:} Validation, technical writing
+\sectiontitle{Campus Involvement}
+\entry{Peer Tutor, Engineering Learning Center}{2025 to Present}
+{\small Support first-year students in statics and introductory programming through weekly drop-in sessions.}
+\resumefooter{AFTER SCALESTEM}
+\end{document}

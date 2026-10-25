@@ -18,6 +18,8 @@ The static site in `public/` can be served by any static web host. For a persist
 
 ## Homepage
 
-The homepage shows an illustrative resume transformation, an interactive three-month project timeline, and three outcomes: a project bullet, a technical write-up developed with mentor/graduate-student feedback, and a project the student can discuss. Examples are illustrative; individual project results will vary.
+The homepage follows the pathway from a student questionnaire, through a three-month learning and research project, to applying with stronger evidence. It compares two complete sample resumes, highlights the added project and modeling skills, and lets visitors inspect either resume on hover or keyboard focus. The fictional before/after resume is also typeset in LaTeX in `resume-example/main.tex`.
 
-The interest form validates in the browser and opens a pre-filled email addressed to `scalestem@gmail.com` for the visitor to review and send. Nothing is sent automatically or stored by this site. The form registers interest in a future cohort; timing and placement are not confirmed. The site does not guarantee employment or admission outcomes.
+The process and examples describe the intended experience. Project results vary, and the site does not guarantee employment or admission.
+
+The interest form validates in the browser and opens a pre-filled email addressed to `scalestem@gmail.com` for the visitor to review and send. Nothing is sent automatically or stored by this site. The form registers interest in a future cohort; no launch date or placement is confirmed.

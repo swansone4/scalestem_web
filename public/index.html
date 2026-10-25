@@ -3,90 +3,219 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f2f4fc">
-  <meta name="description" content="ScaleSTEM guides students from a career goal through a computational research project, with mentor feedback and work they can show.">
-  <title>ScaleSTEM — Build work that moves you forward</title>
+  <meta name="theme-color" content="#f3f1ec">
+  <meta name="description" content="ScaleSTEM guides students from a career goal through a three month computational research project and toward aligned opportunities.">
+  <title>ScaleSTEM | Research that strengthens your next application</title>
   <link rel="stylesheet" href="/styles.css">
   <script defer src="/app.js"></script>
 </head>
 <body>
   <header class="site-header" id="top">
-    <a class="brand" href="#top" aria-label="ScaleSTEM home">Scale<span>STEM</span></a>
-    <nav class="nav" aria-label="Main navigation"><a href="#journey">The journey</a><a href="#outcomes">What you build</a><a class="nav-apply" href="#apply">Apply for a future cohort <span>↗</span></a></nav>
-    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <a class="brand" href="#top" aria-label="ScaleSTEM home">ScaleSTEM<span class="brand-period">.</span></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav"><span></span><span></span></button>
+    <nav class="nav" id="site-nav" aria-label="Main navigation">
+      <a href="#process">The pathway</a>
+      <a href="#outcomes">What you build</a>
+      <a class="nav-apply" href="#apply">Future cohort <span class="arrow-circle" aria-hidden="true">↗</span></a>
+    </nav>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="hero-copy reveal">
-        <p class="eyebrow"><span class="eyebrow-mark"></span> SCALESTEM / COMPUTATIONAL RESEARCH</p>
-        <h1>Build work<br>that moves you<br><em>forward.</em></h1>
-        <p class="hero-lede">Start with the role you want. Follow a guided, mentored research process. Leave with a project, a technical document, and a clearer way to show what you can do.</p>
-        <a class="button" href="#journey">See the three-month journey <span>↓</span></a>
-        <p class="hero-note">A guided computational research experience for students.</p>
-      </div>
-      <div class="hero-visual reveal" aria-label="Illustrative resume transformation for a modeling and simulation role">
-        <div class="visual-label"><span class="live-dot"></span> ONE GOAL. THREE MONTHS OF BUILDING.</div>
-        <div class="resume-stage">
-          <article class="resume resume-before">
-            <div class="resume-top"><span>PROFILE / BEFORE</span><span class="resume-page">01</span></div>
-            <div class="resume-name">Alex Morgan</div><div class="resume-role">TARGET ROLE<br><strong>MODELING &amp; SIMULATION</strong></div>
-            <div class="resume-rule"></div><div class="resume-section-label">PROJECT EXPERIENCE</div>
-            <div class="resume-placeholder"><span></span><span></span><span class="short"></span></div>
-            <div class="gap-note"><span>!</span><span><strong>Evidence gap</strong><br>No modeling project to show yet</span></div>
-            <div class="decision-stamp">NOT<br>SELECTED</div>
-          </article>
-          <svg class="sketch-arrow" viewBox="0 0 118 100" aria-hidden="true"><path d="M7 52 C34 18 73 22 99 46 C104 51 107 55 108 61 M88 44 Q99 47 109 61 Q99 65 93 73"/></svg>
-          <article class="resume resume-after">
-            <div class="resume-top"><span>PROFILE / AFTER SCALESTEM</span><span class="resume-page">02</span></div>
-            <div class="resume-name">Alex Morgan</div><div class="resume-role">TARGET ROLE<br><strong>MODELING &amp; SIMULATION</strong></div>
-            <div class="resume-rule"></div><div class="resume-section-label">RESEARCH PROJECT</div>
-            <div class="resume-bullet"><span class="bullet-dot"></span><p>Built and evaluated a computational model of <mark>[system]</mark>, documenting assumptions, methods, and results.</p></div>
-            <div class="resume-proof"><span>PROJECT</span><span>TECHNICAL REPORT</span><span>MENTOR FEEDBACK</span></div>
-            <div class="after-tag"><span>↗</span> NEW EVIDENCE</div>
-          </article>
+    <section class="hero page-width" aria-labelledby="hero-title">
+      <div class="hero-index"><span>000/</span><span>SCALESTEM</span></div>
+      <div class="hero-copy">
+        <h1 id="hero-title">Build research that strengthens your next <em>application.</em></h1>
+        <p>Choose the roles you want. Build a mentored computational research project that gives you work, methods, and a technical report to show for it.</p>
+        <div class="hero-actions">
+          <a class="button button-ink" href="#process">See the pathway <span class="arrow-circle" aria-hidden="true">↘</span></a>
+          <a class="text-link" href="#resume-example">See the resume change</a>
         </div>
-        <p class="visual-disclaimer">Illustrative example. Projects and outcomes are shaped with each student.</p>
       </div>
-      <a class="scroll-cue" href="#journey"><span></span> SCROLL TO SEE HOW IT BUILDS</a>
     </section>
 
-    <section class="journey section" id="journey">
-      <div class="section-heading reveal"><p class="eyebrow">THE SCALESTEM PROCESS / ABOUT 3 MONTHS</p><h2>One step at a time.<br><em>A project that’s yours.</em></h2><p>Move from a career direction to a researched, reviewed, and presentable piece of work.</p></div>
-      <div class="journey-layout reveal">
-        <div class="month-nav" role="tablist" aria-label="Three-month project timeline">
-          <button class="month-tab active" id="month-1" role="tab" aria-selected="true" data-month="0"><span>01</span><span><small>MONTH ONE</small><strong>Find the question</strong></span><i>↗</i></button>
-          <button class="month-tab" id="month-2" role="tab" aria-selected="false" data-month="1"><span>02</span><span><small>MONTH TWO</small><strong>Build the model</strong></span><i>↗</i></button>
-          <button class="month-tab" id="month-3" role="tab" aria-selected="false" data-month="2"><span>03</span><span><small>MONTH THREE</small><strong>Review &amp; present</strong></span><i>↗</i></button>
-          <div class="month-line"><span></span></div>
+    <section class="resume-section" id="resume-example" aria-labelledby="resume-title">
+      <div class="resume-intro page-width">
+        <p class="eyebrow"><span>001/</span> A PROJECT ADDED</p>
+        <h2 id="resume-title">Show the difference<br>one project can <em>make.</em></h2>
+        <p>The same illustrative student, before and after a ScaleSTEM computational research project. Hover or focus either page to inspect it.</p>
+      </div>
+
+      <div class="resume-comparison page-width">
+        <article class="resume-side">
+          <p class="resume-caption"><span>BEFORE</span><span>No modeling project yet</span></p>
+          <div class="resume-document" tabindex="0" aria-label="Illustrative one page resume before adding computational research experience">
+            <header class="resume-header">
+              <div><h3>Jordan Lee</h3><p>Mechanical Engineering · Modeling &amp; Simulation</p></div>
+              <p class="resume-contact">Denver, CO<br>jordan.lee@example.edu<br>github.com/jordanlee</p>
+            </header>
+            <div class="resume-content">
+              <section class="resume-block resume-muted">
+                <h4>Education</h4>
+                <div class="resume-entry"><strong>Western Plains University</strong><span>May 2027</span></div>
+                <p>B.S. Mechanical Engineering · GPA 3.62/4.00</p>
+                <p class="resume-detail">Coursework: Numerical Methods, Dynamics, Thermodynamics, Linear Algebra</p>
+              </section>
+              <section class="resume-block resume-muted">
+                <h4>Research experience</h4>
+                <div class="resume-entry"><strong>Undergraduate Lab Assistant</strong><span>2025 to Present</span></div>
+                <p class="resume-subtitle">Energy Systems Lab</p>
+                <ul><li>Prepare sensor assemblies and organize experimental readings for weekly lab review.</li><li>Maintain lab notes and create plots from collected datasets in Python and MATLAB.</li></ul>
+              </section>
+              <section class="resume-block resume-muted">
+                <h4>Selected projects</h4>
+                <div class="resume-entry"><strong>Microcontroller Temperature Logger</strong><span>Fall 2025</span></div>
+                <ul><li>Built an Arduino temperature logger and summarized readings from a short lab study.</li></ul>
+                <div class="resume-entry"><strong>Mechanism Design Study</strong><span>Spring 2025</span></div>
+                <ul><li>Modeled a linkage assembly in SolidWorks and documented design constraints.</li></ul>
+              </section>
+              <section class="resume-block resume-muted">
+                <h4>Technical skills</h4>
+                <p><strong>Programming:</strong> Python, MATLAB, C++</p>
+                <p><strong>Tools:</strong> Git, Jupyter, SolidWorks</p>
+                <p><strong>Methods:</strong> Data cleaning, visualization, lab documentation</p>
+              </section>
+              <section class="resume-block resume-muted resume-last">
+                <h4>Campus involvement</h4>
+                <div class="resume-entry"><strong>Peer Tutor, Engineering Learning Center</strong><span>2025 to Present</span></div>
+                <p>Support first-year students in statics and introductory programming.</p>
+              </section>
+            </div>
+            <p class="resume-footnote">ILLUSTRATIVE SAMPLE · BEFORE SCALESTEM</p>
+          </div>
+        </article>
+
+        <div class="resume-transition" aria-label="The research project is added to the resume">
+          <svg viewBox="0 0 84 64" role="img" aria-labelledby="arrow-title">
+            <title id="arrow-title">A research project moves the resume from before to after</title>
+            <defs><marker id="arrowhead" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z"></path></marker></defs>
+            <path class="transition-line" d="M5 41 C24 13 56 13 76 39" marker-end="url(#arrowhead)"></path>
+          </svg>
+          <span>ADD THE<br>RESEARCH</span>
         </div>
-        <article class="month-panel" role="tabpanel" aria-labelledby="month-1" aria-live="polite">
-          <div class="panel-top"><span class="panel-index">01 / DEFINE</span><span class="panel-orbit" aria-hidden="true">◎</span></div>
-          <h3 data-panel-title>Connect the role to a research question.</h3>
-          <p data-panel-copy>Clarify the skills your target path calls for, choose a computational question, and shape a realistic project with your mentor.</p>
-          <div class="panel-output"><span>YOU’RE BUILDING</span><strong data-panel-output>A focused question + project plan</strong><span class="output-arrow">↗</span></div>
-          <div class="panel-grid" aria-hidden="true"></div>
+
+        <article class="resume-side resume-side-after">
+          <p class="resume-caption"><span>AFTER</span><span>With ScaleSTEM research</span></p>
+          <div class="resume-document resume-document-after" tabindex="0" aria-label="Illustrative one page resume after adding a ScaleSTEM computational research project">
+            <header class="resume-header">
+              <div><h3>Jordan Lee</h3><p>Mechanical Engineering · Modeling &amp; Simulation</p></div>
+              <p class="resume-contact">Denver, CO<br>jordan.lee@example.edu<br>github.com/jordanlee</p>
+            </header>
+            <div class="resume-content">
+              <section class="resume-block resume-muted">
+                <h4>Education</h4>
+                <div class="resume-entry"><strong>Western Plains University</strong><span>May 2027</span></div>
+                <p>B.S. Mechanical Engineering · GPA 3.62/4.00</p>
+                <p class="resume-detail">Coursework: Numerical Methods, Dynamics, Thermodynamics, Linear Algebra</p>
+              </section>
+              <section class="resume-block resume-muted">
+                <h4>Research experience</h4>
+                <div class="resume-entry"><strong>Undergraduate Lab Assistant</strong><span>2025 to Present</span></div>
+                <p class="resume-subtitle">Energy Systems Lab</p>
+                <ul><li>Prepare sensor assemblies and organize experimental readings for weekly lab review.</li><li>Maintain lab notes and create plots from collected datasets in Python and MATLAB.</li></ul>
+              </section>
+              <section class="resume-block">
+                <h4>Selected projects</h4>
+                <div class="resume-entry resume-change"><strong>Computational Thermal Systems Project</strong><span>3 months</span></div>
+                <p class="resume-subtitle resume-change-subtitle">ScaleSTEM Guided Research</p>
+                <ul class="resume-change-list"><li>Developed a Python thermal network model for a compact heat exchanger and compared predicted outlet temperatures across flow conditions.</li><li>Documented assumptions, validation checks, scenario analysis, and findings in a technical report reviewed with mentor and graduate student feedback.</li></ul>
+                <div class="resume-muted">
+                  <div class="resume-entry"><strong>Microcontroller Temperature Logger</strong><span>Fall 2025</span></div>
+                  <ul><li>Built an Arduino temperature logger and summarized readings from a short lab study.</li></ul>
+                  <div class="resume-entry"><strong>Mechanism Design Study</strong><span>Spring 2025</span></div>
+                  <ul><li>Modeled a linkage assembly in SolidWorks and documented design constraints.</li></ul>
+                </div>
+              </section>
+              <section class="resume-block">
+                <h4>Technical skills</h4>
+                <div class="resume-muted">
+                  <p><strong>Programming:</strong> Python, MATLAB, C++</p>
+                  <p><strong>Tools:</strong> Git, Jupyter, SolidWorks</p>
+                  <p><strong>Methods:</strong> Data cleaning, visualization, lab documentation</p>
+                </div>
+                <p class="resume-change-skill"><strong>Modeling:</strong> Thermal network simulation, parameter sweeps</p>
+              </section>
+              <section class="resume-block resume-muted resume-last">
+                <h4>Campus involvement</h4>
+                <div class="resume-entry"><strong>Peer Tutor, Engineering Learning Center</strong><span>2025 to Present</span></div>
+                <p>Support first-year students in statics and introductory programming.</p>
+              </section>
+            </div>
+            <p class="resume-footnote">ILLUSTRATIVE SAMPLE · AFTER SCALESTEM</p>
+          </div>
         </article>
       </div>
-      <div class="journey-foot"><span>MENTOR GUIDANCE THROUGHOUT</span><span class="foot-rule"></span><span>YOUR INTERESTS SET THE DIRECTION</span></div>
+      <p class="resume-disclaimer page-width">This is a fictional resume example, not a promised student result. Project details and resume language would reflect each student’s own work.</p>
     </section>
 
-    <section class="outcomes section" id="outcomes">
-      <div class="outcomes-heading reveal"><p class="eyebrow">WHAT YOU CAN TAKE WITH YOU</p><h2>Make the work<br><em>easy to see.</em></h2><p>The project is the experience. The report and resume bullet help you communicate it.</p></div>
-      <div class="artifact-stack reveal">
-        <article class="artifact artifact-main"><span class="artifact-count">01 / RESUME</span><div class="artifact-icon">↗</div><h3>A high-signal project bullet.</h3><p>Describe the model you built, the methods you used, and what you learned—tailored to the roles you’re pursuing.</p><div class="bullet-example">“Developed a computational model of <mark>[system]</mark>; evaluated <mark>[question]</mark> and documented findings.”</div></article>
-        <article class="artifact artifact-side"><span class="artifact-count">02 / TECHNICAL DOCUMENT</span><div class="doc-lines"><i></i><i></i><i></i><i></i><i></i></div><h3>A reviewed technical write-up.</h3><p>Build a written record of your question, approach, analysis, and results with mentor and graduate-student feedback.</p></article>
-        <article class="artifact artifact-side"><span class="artifact-count">03 / PROJECT</span><div class="model-icon"><span></span><span></span><span></span><span></span></div><h3>A project you can discuss.</h3><p>Explain the problem, your modeling choices, and how you approached the work.</p></article>
+    <section class="process-section" id="process" aria-labelledby="process-title">
+      <div class="process-inner page-width">
+        <div class="process-heading">
+          <p class="eyebrow"><span>002/</span> THE PATHWAY</p>
+          <h2 id="process-title">From where you are<br>to where you <em>want to go.</em></h2>
+          <p>Three steps connect your starting point, a guided research project, and the opportunities you want to pursue.</p>
+        </div>
+        <div class="pipeline">
+          <article class="pipeline-step">
+            <p class="step-index">01 / QUESTIONNAIRE</p>
+            <h3>Map your direction.</h3>
+            <p>Share your current skills, experience, interests, and target roles. The questionnaire helps identify where you are and what you need to build next.</p>
+          </article>
+          <article class="pipeline-step pipeline-step-research">
+            <p class="step-index">02 / THREE MONTHS</p>
+            <h3>Learn, then build.</h3>
+            <p>Follow a structured learning and research pipeline. Build the methods and computational project that match your direction, with mentor guidance along the way.</p>
+            <ol class="month-track" aria-label="Three month research timeline">
+              <li><span>MONTH 01</span><strong>Scope</strong><small>Set a question and learn the foundations.</small></li>
+              <li><span>MONTH 02</span><strong>Model</strong><small>Build, test, and refine the project.</small></li>
+              <li><span>MONTH 03</span><strong>Review</strong><small>Analyze findings and write the report.</small></li>
+            </ol>
+          </article>
+          <article class="pipeline-step">
+            <p class="step-index">03 / OPPORTUNITY PIPELINE</p>
+            <h3>Put the work to use.</h3>
+            <p>Identify aligned internships, research projects, and modeling or simulation roles. Use your project and reviewed report to make a focused application for each.</p>
+          </article>
+        </div>
       </div>
-      <p class="outcomes-note reveal">Projects and resume language are examples; each student’s work and results will differ. ScaleSTEM does not guarantee a job or admission outcome.</p>
     </section>
 
-    <section class="apply-section" id="apply">
-      <div class="apply-inner reveal"><p class="eyebrow">PROSPECTIVE COHORT</p><h2>Start with what<br>you want to <em>do.</em></h2><p>Register your interest in a future ScaleSTEM cohort. Share your target direction and what you’d like to build.</p><p class="apply-note">No launch date is confirmed. This is an expression of interest, not a placement.</p></div>
-      <form class="interest-form reveal" data-mailto-form><label>Your name<input name="name" autocomplete="name" required placeholder="Name"></label><label>Email<input name="email" type="email" autocomplete="email" required placeholder="you@example.com"></label><label>Target role or research interest<input name="target" required placeholder="e.g. modeling-based systems engineering"></label><button class="button button-light" type="submit">Register interest <span>↗</span></button><p class="form-status" data-form-status role="status" aria-live="polite">Opens an email draft for you to review and send.</p></form>
+    <section class="outcomes-section" id="outcomes" aria-labelledby="outcomes-title">
+      <div class="outcomes-inner page-width">
+        <div class="outcomes-heading">
+          <p class="eyebrow"><span>003/</span> WHAT YOU BUILD</p>
+          <h2 id="outcomes-title">Work that says<br>more than <em>interested.</em></h2>
+        </div>
+        <div class="outcomes-list">
+          <article><span>01</span><div><h3>A computational project</h3><p>A focused piece of work aligned with a direction you want to pursue.</p></div></article>
+          <article><span>02</span><div><h3>A technical document</h3><p>Your question, approach, analysis, and results, reviewed with mentors and graduate students.</p></div></article>
+          <article><span>03</span><div><h3>Resume evidence</h3><p>Specific bullets that explain what you built, how you worked, and what you learned.</p></div></article>
+        </div>
+      </div>
+      <p class="outcomes-note page-width">Examples describe the intended process. Project results vary, and ScaleSTEM does not guarantee employment or admission.</p>
+    </section>
+
+    <section class="apply-section" id="apply" aria-labelledby="apply-title">
+      <div class="apply-panel page-width">
+        <div class="apply-copy">
+          <p class="eyebrow"><span>004/</span> FUTURE COHORT</p>
+          <h2 id="apply-title">Start with where<br>you want to <em>go.</em></h2>
+          <p>Register your interest in a future ScaleSTEM cohort. Tell us your target direction and what you hope to build.</p>
+          <p class="apply-note">No launch date has been confirmed. This form records interest, not a placement.</p>
+        </div>
+        <form class="interest-form" data-mailto-form>
+          <label>Your name<input name="name" autocomplete="name" required placeholder="Name"></label>
+          <label>Email<input name="email" type="email" autocomplete="email" required placeholder="you@example.com"></label>
+          <label>Target role or research interest<input name="target" required placeholder="e.g. modeling based systems engineering"></label>
+          <button class="button button-ink" type="submit">Register interest <span class="arrow-circle" aria-hidden="true">↗</span></button>
+          <p class="form-status" data-form-status role="status" aria-live="polite">Opens an email draft for you to review and send.</p>
+        </form>
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer"><a class="brand" href="#top">Scale<span>STEM</span></a><span>COMPUTATIONAL RESEARCH COMMUNITY</span><a href="mailto:scalestem@gmail.com">scalestem@gmail.com ↗</a></footer>
+  <footer class="site-footer">
+    <div class="footer-top"><a class="brand" href="#top">ScaleSTEM<span class="brand-period">.</span></a><span>COMPUTATIONAL RESEARCH COMMUNITY</span><a href="mailto:scalestem@gmail.com">scalestem@gmail.com ↗</a></div>
+    <p class="footer-wordmark" aria-hidden="true">ScaleSTEM</p>
+  </footer>
 </body>
 </html>
