@@ -16,15 +16,6 @@ navigation?.querySelectorAll('a[href^="#"]').forEach((link) => {
   });
 });
 
-const marketRibbon = document.querySelector('[data-market-ribbon]');
-const marketToggle = marketRibbon?.querySelector('[data-market-toggle]');
-marketToggle?.addEventListener('click', () => {
-  const paused = marketRibbon.classList.toggle('is-paused');
-  marketToggle.setAttribute('aria-pressed', String(paused));
-  marketToggle.setAttribute('aria-label', paused ? 'Resume scrolling quotes' : 'Pause scrolling quotes');
-  marketToggle.textContent = paused ? 'Play' : 'Pause';
-});
-
 if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -239,17 +230,3 @@ if (simulation && count) {
     playApplicationSimulation();
   });
 }
-
-document.querySelector('[data-mailto-form]')?.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const form = event.currentTarget;
-  if (!form.reportValidity()) return;
-  const details = [...new FormData(form).entries()]
-    .filter(([, value]) => value)
-    .map(([key, value]) => `${key === 'target' ? 'Target role or research interest' : key}: ${value}`)
-    .join('\n');
-  const subject = encodeURIComponent('ScaleSTEM future cohort interest');
-  const body = encodeURIComponent(details);
-  form.querySelector('[data-form-status]').textContent = 'Your email draft is opening. Review it and press Send to register your interest.';
-  window.location.href = `mailto:scalestem@gmail.com?subject=${subject}&body=${body}`;
-});
