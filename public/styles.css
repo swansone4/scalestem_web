@@ -26,7 +26,7 @@ button, input { font: inherit; }
 .nav>a:not(.nav-apply), .text-link, .footer-top>a { text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 5px; transition: text-decoration-color .2s ease, color .2s ease; }
 .nav>a:hover, .text-link:hover, .footer-top>a:hover { color: var(--accent); text-decoration-color: currentColor; }
 .nav-apply { justify-self: end; position: relative; display: inline-flex; align-items: center; gap: 8px; padding: 8px 10px; color: var(--ink); font: 500 16px/1.2 'Segoe Print', 'Bradley Hand', 'Comic Sans MS', cursive; transition: color .2s ease; }
-.nav-apply::before { position: absolute; inset: 3px 1px; border: 1px solid var(--accent); border-radius: 43% 56% 47% 51%; content: ''; transform: rotate(-2deg); transition: transform .25s ease; }
+.nav-apply::before { position: absolute; inset: -3px -10px; border: 1px solid var(--accent); border-radius: 43% 56% 47% 51%; content: ''; transform: rotate(-2deg); transition: transform .25s ease; }
 .nav-apply:hover { color: var(--accent); }
 .nav-apply:hover::before { transform: rotate(1deg) scale(1.04); }
 .nav-apply>span { color: #c43d32; font: 20px/1 var(--serif); }
@@ -46,7 +46,12 @@ a:hover .arrow-circle, button:hover .arrow-circle { transform: translate(3px, -2
 .problem-heading { max-width: 1200px; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(290px, .8fr); gap: 20px 42px; align-items: center; padding-bottom: 30px; }
 .problem-copy { min-width: 0; }
 .problem-heading .eyebrow { margin-bottom: 16px; }
-.problem-heading h1 { margin: 0; font: 300 clamp(46px, 5.1vw, 68px)/1.02 var(--serif); letter-spacing: -.045em; }
+.problem-heading h1 { display: grid; margin: 0; font: 300 clamp(46px, 5.1vw, 68px)/1.02 var(--serif); letter-spacing: -.045em; }
+.headline-slide { grid-area: 1 / 1; align-self: center; opacity: 0; transform: translateY(12px); transition: opacity .7s ease, transform .7s cubic-bezier(.22,1,.36,1); }
+.headline-slide.is-active { opacity: 1; transform: translateY(0); }
+.headline-brand { color: var(--accent); }
+.headline-chance { position: relative; z-index: 0; color: #c43d32; font-weight: 300; }
+.headline-chance::after { position: absolute; z-index: -1; right: -.03em; bottom: .02em; left: -.03em; height: .28em; background: rgba(223, 232, 130, .72); content: ''; transform: rotate(-1.5deg); }
 .problem-heading h1 em { color: var(--accent); font-weight: 300; }
 .problem-heading h1 .problem-result { color: #c43d32; }
 .cycle-sketch { min-width: 0; grid-column: 2; grid-row: 1; display: flex; flex-direction: column; align-items: center; justify-self: end; width: min(100%, 365px); color: var(--ink); text-align: center; transition: transform .25s ease; }
@@ -76,9 +81,24 @@ a:hover .arrow-circle, button:hover .arrow-circle { transform: translate(3px, -2
 .market-quote figcaption a { text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; }
 .market-quote figcaption span { display: block; margin-top: 2px; color: var(--muted); font-size: 9px; }
 .application-simulation { min-width: 0; overflow: hidden; border: 1px solid #d4d7dd; border-radius: 11px; background: #fff; box-shadow: 0 16px 44px rgba(29, 42, 65, .10); }
-.application-simulation.page-width { width: min(800px, calc(100% - 80px)); }
+.application-simulation.page-width { width: min(1520px, calc(100% - 80px)); }
+.tracker-label { display: flex; justify-content: space-between; gap: 16px; margin: 0; padding: 10px 18px; border-bottom: 1px solid #e1e4e9; background: #f8fafd; color: #2f4b7c; font: 8px/1.4 var(--mono); letter-spacing: .075em; }
+.tracker-label span { color: #687080; letter-spacing: 0; }
 .simulation-grid { display: grid; grid-template-columns: minmax(320px, .82fr) minmax(0, 1.55fr); min-height: 372px; }
 .application-panel { min-width: 0; padding: 22px 24px 18px; background: #fbfcfe; border-right: 1px solid #e1e4e9; }
+.tracker-strip { display: grid; grid-template-columns: 190px 205px minmax(0, 1fr); grid-template-rows: auto 1fr; gap: 0 22px; padding: 16px 20px; border: 0; border-bottom: 1px solid #e1e4e9; }
+.tracker-strip .application-summary { grid-column: 1; grid-row: 1 / span 2; align-self: stretch; display: flex; flex-direction: column; justify-content: center; border-right: 1px solid #e3e6eb; border-bottom: 0; padding: 0 18px 0 0; }
+.tracker-strip .count-row { flex-wrap: wrap; }
+.tracker-strip .count-row strong { font-size: 50px; }
+.tracker-strip .count-plus { font-size: 26px; }
+.tracker-strip .platform-heading { grid-column: 2; grid-row: 1; margin: 4px 0 7px; }
+.tracker-strip .platforms { grid-column: 2; grid-row: 2; align-content: start; border: 0; padding: 0; }
+.tracker-strip .list-heading { grid-column: 3; grid-row: 1; justify-content: space-between; margin: 4px 0 7px; }
+.tracker-strip .application-list { grid-column: 3; grid-row: 2; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 16px; }
+.tracker-strip .job-row { grid-template-columns: 26px minmax(0,1fr) auto; min-height: 36px; gap: 5px; }
+.tracker-strip .job-source-mark { width: 24px; }
+.tracker-strip .job-row strong { font-size: 10px; }
+.tracker-strip .job-row small, .tracker-strip .status-label { font-size: 8px; }
 .application-summary, .platforms, .platform-chip, .list-heading, .job-row, .gmail-topbar, .gmail-brand, .gmail-search, .gmail-tools, .gmail-folder, .gmail-toolbar, .gmail-toolbar-actions, .gmail-tabs, .email-row, .simulation-footer { display: flex; align-items: center; }
 .application-summary, .gmail-toolbar, .email-row, .simulation-footer { justify-content: space-between; }
 .application-summary { display: block; margin-top: 0; padding-bottom: 13px; border-bottom: 1px solid #e3e6eb; }
@@ -107,6 +127,29 @@ a:hover .arrow-circle, button:hover .arrow-circle { transform: translate(3px, -2
 .status-review { background: #e8f0fe; color: #1a73e8; }
 .status-rejected { background: #fce8e6; color: #b3261e; }
 .reply-panel { min-width: 0; background: #fff; }
+.mail-comparison { display: grid; grid-template-columns: minmax(0, 1fr) 150px minmax(0, 1fr); align-items: start; }
+.mail-stage { min-width: 0; overflow: hidden; background: #fff; }
+.mail-stage + .mail-stage { border-left: 1px solid #d4d7dd; }
+.mail-stage .simulation-stage-label { min-height: 35px; padding-inline: 13px; }
+.mail-stage .reply-panel, .mail-stage .positive-inbox { border: 0; }
+.mail-stage .gmail-topbar { height: 54px; gap: 10px; padding-inline: 13px; }
+.mail-stage .gmail-brand { gap: 5px; font-size: 17px; }
+.mail-stage .gmail-brand svg { width: 26px; height: 26px; }
+.mail-stage .gmail-search { height: 36px; margin-inline: 2px auto; padding-inline: 10px; font-size: 10px; }
+.mail-stage .gmail-tools { gap: 8px; font-size: 12px; }
+.mail-stage .gmail-avatar { width: 24px; height: 24px; }
+.mail-stage .gmail-body, .mail-stage .positive-inbox-body { grid-template-columns: 118px minmax(0,1fr); min-height: 260px; }
+.mail-stage .gmail-sidebar { padding: 9px 5px; }
+.mail-stage .compose-button { margin-bottom: 10px; padding: 9px 11px; font-size: 10px; }
+.mail-stage .gmail-folder { min-height: 24px; gap: 7px; padding-inline: 7px; font-size: 9px; }
+.mail-stage .gmail-inbox { padding: 0 8px 9px 3px; }
+.mail-stage .gmail-toolbar { height: 38px; font-size: 9px; }
+.mail-stage .gmail-toolbar-actions { gap: 10px; }
+.mail-stage .gmail-tabs { height: 35px; }
+.mail-stage .gmail-tabs>span { gap: 4px; padding-inline: 5px; font-size: 9px; }
+.mail-stage .email-row { grid-template-columns: 12px 14px minmax(68px,.6fr) minmax(0,1.8fr) 45px; gap: 4px; min-height: 42px; }
+.mail-stage .email-sender, .mail-stage .email-subject { font-size: 9px; }
+.mail-stage .email-row time { font-size: 8px; }
 .gmail-topbar { height: 61px; gap: 16px; padding: 0 19px; background: #f8fafd; }
 .gmail-menu { flex: 0 0 auto; color: #5f6368; font-size: 20px; }
 .gmail-brand { flex: 0 0 auto; gap: 8px; color: #5f6368; font-size: 20px; font-weight: 500; letter-spacing: -.04em; }
@@ -154,10 +197,10 @@ a:hover .arrow-circle, button:hover .arrow-circle { transform: translate(3px, -2
 .simulation-footer button:hover span { transform: rotate(90deg); }
 .simulation-stage-label { min-height: 39px; display: flex; align-items: center; justify-content: space-between; gap: 14px; margin: 0; padding: 8px 18px; border-bottom: 1px solid #e0e3e8; background: #f8fafd; color: #2f4b7c; font: 8px/1.4 var(--mono); letter-spacing: .075em; }
 .simulation-stage-label span { color: #687080; font: 10px/1.4 var(--sans); letter-spacing: 0; }
-.simulation-transformation { min-height: 88px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; border-top: 1px solid #e0e3e8; background: #f5f3ee; color: #347b4d; text-align: center; font: 8px/1.3 var(--mono); letter-spacing: .08em; }
-.simulation-transformation svg { width: 35px; height: 34px; overflow: visible; }
+.simulation-transformation { min-height: 260px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 9px; padding: 12px; background: #f5f3ee; color: #347b4d; text-align: center; font: 8px/1.45 var(--mono); letter-spacing: .08em; }
+.simulation-transformation svg { width: 105px; height: 44px; overflow: visible; }
 .simulation-transformation path { fill: none; stroke: #347b4d; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-.positive-inbox { border-top: 1px solid #d4d7dd; background: #fff; }
+.positive-inbox { background: #fff; }
 .positive-inbox .simulation-stage-label { border-bottom: 1px solid #e0e3e8; }
 .positive-inbox .gmail-topbar { border-bottom: 1px solid #e8eaed; }
 .positive-inbox-body { display: grid; grid-template-columns: 152px minmax(0, 1fr); min-height: 185px; }
@@ -264,6 +307,16 @@ a:hover .arrow-circle, button:hover .arrow-circle { transform: translate(3px, -2
   .nav { gap: 21px; font-size: 13px; }
   .problem-heading h1 { font-size: clamp(43px, 6vw, 66px); }
   .market-quote { width: 300px; }
+  .tracker-strip { grid-template-columns: 155px minmax(0,1fr); grid-template-rows: auto auto auto; gap: 7px 18px; }
+  .tracker-strip .application-summary { grid-column: 1; grid-row: 1 / span 2; }
+  .tracker-strip .platform-heading { grid-column: 2; grid-row: 1; }
+  .tracker-strip .platforms { grid-column: 2; grid-row: 2; }
+  .tracker-strip .list-heading { grid-column: 1 / -1; grid-row: 3; margin-top: 8px; }
+  .tracker-strip .application-list { grid-column: 1 / -1; grid-row: 4; }
+  .mail-comparison { grid-template-columns: minmax(0,1fr); }
+  .mail-stage + .mail-stage { border-top: 1px solid #d4d7dd; border-left: 0; }
+  .simulation-transformation { min-height: 94px; flex-direction: row; }
+  .simulation-transformation svg { width: 86px; }
   .simulation-grid { grid-template-columns: 1fr; }
   .application-panel { border-right: 0; border-bottom: 1px solid #e1e4e9; }
   .gmail-body { grid-template-columns: 145px minmax(0, 1fr); }
@@ -287,7 +340,7 @@ a:hover .arrow-circle, button:hover .arrow-circle { transform: translate(3px, -2
   .nav { display: none; position: absolute; inset: 63px 0 auto; padding: 19px 20px 23px; flex-direction: column; align-items: stretch; gap: 18px; background: var(--paper); border-bottom: 1px solid var(--line); font-size: 14px; }
   .nav.open { display: flex; }
   .nav-apply { grid-column: 2; grid-row: 1; justify-self: end; gap: 5px; padding: 6px 8px; font-size: 11px; }
-  .nav-apply::before { inset: 3px 1px; }
+  .nav-apply::before { inset: -2px -6px; }
   .problem-section { padding: 59px 0 62px; }
   .problem-heading .eyebrow { margin-bottom: 16px; }
   .problem-heading h1 { font-size: clamp(39px, 10vw, 52px); }
@@ -298,6 +351,13 @@ a:hover .arrow-circle, button:hover .arrow-circle { transform: translate(3px, -2
   .market-quote blockquote { font-size: 15px; }
   .application-simulation { border-radius: 8px; }
   .application-simulation.page-width { width: calc(100% - 40px); }
+  .tracker-label { align-items: flex-start; flex-direction: column; gap: 2px; padding: 9px 12px; }
+  .tracker-strip { display: block; padding: 16px 15px 12px; }
+  .tracker-strip .application-summary { display: block; padding: 0 0 12px; border-right: 0; border-bottom: 1px solid #e3e6eb; }
+  .tracker-strip .platform-heading { margin: 12px 0 7px; }
+  .tracker-strip .platforms { padding-bottom: 9px; border-bottom: 1px solid #e3e6eb; }
+  .tracker-strip .list-heading { margin: 12px 0 2px; }
+  .tracker-strip .application-list { grid-template-columns: 1fr; }
   .application-panel { padding: 17px 15px 13px; }
   .gmail-topbar { height: 53px; gap: 9px; padding-inline: 11px; }
   .gmail-brand { gap: 5px; font-size: 17px; }
@@ -322,7 +382,8 @@ a:hover .arrow-circle, button:hover .arrow-circle { transform: translate(3px, -2
   .simulation-footer p { max-width: 60%; font-size: 7px; }
   .simulation-stage-label { align-items: flex-start; flex-direction: column; gap: 2px; padding: 8px 12px; }
   .simulation-stage-label span { font-size: 9px; }
-  .simulation-transformation { min-height: 78px; font-size: 7px; }
+  .simulation-transformation { min-height: 76px; font-size: 7px; }
+  .simulation-transformation svg { width: 70px; }
   .resume-section { padding: 12px 0 66px; }
   .resume-intro { display: block; margin-bottom: 28px; }
   .resume-intro .eyebrow { margin-bottom: 19px; }

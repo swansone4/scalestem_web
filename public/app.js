@@ -16,6 +16,17 @@ navigation?.querySelectorAll('a[href^="#"]').forEach((link) => {
   });
 });
 
+const headlineRotator = document.querySelector('[data-headline-rotator]');
+const headlineSlides = [...(headlineRotator?.querySelectorAll('[data-headline-slide]') ?? [])];
+if (headlineSlides.length > 1) {
+  window.setTimeout(() => {
+    headlineSlides[0].classList.remove('is-active');
+    headlineSlides[0].setAttribute('aria-hidden', 'true');
+    headlineSlides[1].classList.add('is-active');
+    headlineSlides[1].removeAttribute('aria-hidden');
+  }, 4300);
+}
+
 const marketRibbon = document.querySelector('[data-market-ribbon]');
 const marketTrack = marketRibbon?.querySelector('[data-market-track]');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
