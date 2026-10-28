@@ -16,6 +16,29 @@ navigation?.querySelectorAll('a[href^="#"]').forEach((link) => {
   });
 });
 
+const marketRibbon = document.querySelector('[data-market-ribbon]');
+const marketTrack = marketRibbon?.querySelector('[data-market-track]');
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+let marketOffset = 0;
+let marketLastTime = 0;
+
+if (marketRibbon && marketTrack && !reducedMotion.matches) {
+  const moveQuotes = (now) => {
+    const loopWidth = marketTrack.scrollWidth / 2;
+    if (loopWidth > 0 && marketLastTime > 0) {
+      const elapsed = Math.min(now - marketLastTime, 50) / 1000;
+      const secondsPerLoop = 62;
+      const speed = (loopWidth / secondsPerLoop) * (marketRibbon.matches(':hover') ? 0.78 : 1);
+      marketOffset = (marketOffset + speed * elapsed) % loopWidth;
+      marketTrack.style.transform = `translate3d(${-marketOffset}px, 0, 0)`;
+    }
+    marketLastTime = now;
+    window.requestAnimationFrame(moveQuotes);
+  };
+  window.requestAnimationFrame(moveQuotes);
+  document.addEventListener('visibilitychange', () => { marketLastTime = 0; });
+}
+
 if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -24,7 +47,7 @@ if ('IntersectionObserver' in window) {
       observer.unobserve(entry.target);
     });
   }, { threshold: 0.18 });
-  document.querySelectorAll('.resume-section, .pipeline').forEach((element) => observer.observe(element));
+  document.querySelectorAll('.resume-section, .pipeline, .positive-inbox').forEach((element) => observer.observe(element));
 }
 
 const simulation = document.querySelector('[data-application-sim]');
