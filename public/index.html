@@ -4,20 +4,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f3f1ec">
-  <meta name="description" content="ScaleSTEM guides students from a career goal through a three month computational research project and toward aligned opportunities.">
+  <meta name="description" content="ScaleSTEM guides students from a career goal through a 3–6 month computational research project, documented on GitHub and in a technical report.">
   <title>ScaleSTEM | Research that strengthens your next application</title>
+  <script>document.documentElement.classList.add('js');</script>
   <link rel="stylesheet" href="/styles.css">
   <script defer src="/app.js"></script>
 </head>
 <body>
-  <header class="site-header" id="top">
+  <header class="site-header" id="top" data-header>
     <a class="brand" href="#top" aria-label="ScaleSTEM home">ScaleSTEM<span class="brand-period">.</span></a>
     <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav"><span></span><span></span></button>
     <nav class="nav" id="site-nav" aria-label="Main navigation">
-      <a href="#problem">The problem</a>
-      <a href="#process">The pathway</a>
+      <a href="#problem" data-nav-link>The problem</a>
+      <a href="#process" data-nav-link>The pathway</a>
+      <a href="#resume-example" data-nav-link>The result</a>
     </nav>
     <a class="nav-apply" href="https://tally.so/r/VppXWv?fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAadMCktHfGu_B7Ss2otcsTITd8fbgHAADUqcKLJmrdyJl_mdKVUUmWXJt0Fdzg_aem_FYqhgGGfs26yFqMbzpCalw" target="_blank" rel="noopener noreferrer">Register interest <img src="/assets/cohort-mark.svg" alt=""></a>
+    <span class="scroll-progress" data-scroll-progress aria-hidden="true"></span>
   </header>
 
   <main>
@@ -25,19 +28,21 @@
       <div class="problem-inner">
         <div class="problem-heading page-width">
           <div class="problem-copy">
-            <p class="eyebrow"><span>001/</span> THE PROBLEM</p>
-            <h1 id="problem-title" data-headline-rotator aria-live="polite">
+            <p class="eyebrow hero-in" style="--d: 0s"><span>001/</span> THE PROBLEM</p>
+            <h1 id="problem-title" class="hero-in" style="--d: .12s" data-headline-rotator aria-live="polite">
               <span class="headline-slide is-active" data-headline-slide>Endless applications.<br>The same <em class="problem-result">result</em>.</span>
               <span class="headline-slide" data-headline-slide aria-hidden="true"><span class="headline-brand">ScaleSTEM</span> ensures your next internship, fellowship, or job application has a <em class="headline-chance">chance</em>.</span>
             </h1>
+            <div class="headline-dots hero-in" style="--d: .24s" aria-hidden="true"><i data-headline-dot class="is-active"></i><i data-headline-dot></i></div>
+            <a class="hero-scroll hero-in" style="--d: .34s" href="#process">See how it works <span aria-hidden="true">↓</span></a>
           </div>
-          <a class="cycle-sketch" href="https://tally.so/r/VppXWv?fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAadMCktHfGu_B7Ss2otcsTITd8fbgHAADUqcKLJmrdyJl_mdKVUUmWXJt0Fdzg_aem_FYqhgGGfs26yFqMbzpCalw" target="_blank" rel="noopener noreferrer" aria-label="Register for a ScaleSTEM cohort">
+          <a class="cycle-sketch hero-art" href="https://tally.so/r/VppXWv?fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAadMCktHfGu_B7Ss2otcsTITd8fbgHAADUqcKLJmrdyJl_mdKVUUmWXJt0Fdzg_aem_FYqhgGGfs26yFqMbzpCalw" target="_blank" rel="noopener noreferrer" aria-label="Register for a ScaleSTEM cohort">
             <img class="career-map-art" src="/assets/aerodynamic-resume-transformation.png" alt="Before and after résumé comparison showing a computational aerodynamics project with an aerodynamic teardrop and airflow streamlines">
-            <span class="cycle-sketch-callout">Register for a cohort</span>
+            <span class="cycle-sketch-callout">Register for a cohort <span aria-hidden="true">↗</span></span>
           </a>
         </div>
 
-        <section class="market-ribbon" data-market-ribbon aria-label="Voices on the entry-level job market">
+        <section class="market-ribbon hero-in" style="--d: .45s" data-market-ribbon aria-label="Voices on the entry-level job market">
           <div class="market-viewport">
             <div class="market-track" data-market-track>
               <div class="market-quote-set">
@@ -58,7 +63,7 @@
           </div>
         </section>
 
-        <div class="demo-video page-width" id="demo-video" role="region" aria-label="Demo video">
+        <div class="demo-video page-width" id="demo-video" role="region" aria-label="Demo video" data-reveal>
           <div class="demo-video-frame">
             <span class="demo-video-play" aria-hidden="true"></span>
             <p>Demo video coming soon</p>
@@ -70,12 +75,12 @@
 
     <section class="process-section" id="process" aria-labelledby="process-title">
       <div class="process-inner page-width">
-        <div class="process-heading">
+        <div class="process-heading" data-reveal>
           <p class="eyebrow"><span>002/</span> THE SOLUTION</p>
           <h2 id="process-title">Pick your <em class="process-title-red">dream career.</em></h2>
           <p class="process-note">A clear route from your goal to work you can show.</p>
         </div>
-        <div class="workflow" aria-label="ScaleSTEM research workflow">
+        <div class="workflow" aria-label="ScaleSTEM research workflow" data-reveal>
           <article class="workflow-card workflow-intake">
             <p class="workflow-step"><span>01</span> START HERE</p>
             <h3>Set your direction</h3>
@@ -88,7 +93,7 @@
             </div>
             <p class="workflow-caption">Your interests and experience shape the project direction.</p>
           </article>
-          <div class="workflow-link" aria-hidden="true"><svg viewBox="0 0 76 24"><path d="M3 12 C24 8 47 8 67 12 M57 5 Q63 10 70 12 Q64 15 58 20"/></svg></div>
+          <div class="workflow-link" aria-hidden="true"><svg viewBox="0 0 76 24"><path pathLength="1" d="M3 12 C24 8 47 8 67 12 M57 5 Q63 10 70 12 Q64 15 58 20"/></svg></div>
           <article class="workflow-card workflow-advisor">
             <p class="workflow-step"><span>02</span> 3–6 MONTHS · GUIDED RESEARCH</p>
             <h3>Plan, model, refine</h3>
@@ -99,7 +104,7 @@
             </div>
             <p class="workflow-caption">Get a structured plan, then make progress with research guidance.</p>
           </article>
-          <div class="workflow-link" aria-hidden="true"><svg viewBox="0 0 76 24"><path d="M3 12 C24 8 47 8 67 12 M57 5 Q63 10 70 12 Q64 15 58 20"/></svg></div>
+          <div class="workflow-link" aria-hidden="true"><svg viewBox="0 0 76 24"><path pathLength="1" d="M3 12 C24 8 47 8 67 12 M57 5 Q63 10 70 12 Q64 15 58 20"/></svg></div>
           <article class="workflow-card workflow-artifacts">
             <p class="workflow-step"><span>03</span> WHAT YOU MAKE</p>
             <h3>Publish work you can show</h3>
@@ -117,17 +122,106 @@
             </div>
           </article>
         </div>
-        <a class="process-register" href="https://tally.so/r/VppXWv?fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAadMCktHfGu_B7Ss2otcsTITd8fbgHAADUqcKLJmrdyJl_mdKVUUmWXJt0Fdzg_aem_FYqhgGGfs26yFqMbzpCalw" target="_blank" rel="noopener noreferrer">Register interest in a future cohort <span aria-hidden="true">↗</span></a>
+
+        <div class="workspace" data-workspace data-reveal>
+          <p class="workspace-eyebrow eyebrow"><span>INSIDE</span> THE WORKSPACE</p>
+          <div class="workspace-window">
+            <div class="workspace-bar" aria-hidden="true"><i></i><i></i><i></i><span>scalestem · teardrop-airfoil-cfd</span></div>
+            <div class="workspace-body">
+              <div class="workspace-tabs" role="tablist" aria-label="Workspace tools">
+                <button type="button" role="tab" id="ws-tab-lessons" aria-controls="ws-lessons" aria-selected="true" data-workspace-tab><span class="ws-icon" aria-hidden="true">§</span>Lessons</button>
+                <button type="button" role="tab" id="ws-tab-advisor" aria-controls="ws-advisor" aria-selected="false" tabindex="-1" data-workspace-tab><span class="ws-icon" aria-hidden="true">AI</span>Advisor</button>
+                <button type="button" role="tab" id="ws-tab-library" aria-controls="ws-library" aria-selected="false" tabindex="-1" data-workspace-tab><span class="ws-icon" aria-hidden="true">▤</span>Library</button>
+                <button type="button" role="tab" id="ws-tab-notebook" aria-controls="ws-notebook" aria-selected="false" tabindex="-1" data-workspace-tab><span class="ws-icon" aria-hidden="true">✎</span>Notebook</button>
+                <button type="button" role="tab" id="ws-tab-track" aria-controls="ws-track" aria-selected="false" tabindex="-1" data-workspace-tab><span class="ws-icon" aria-hidden="true">✓</span>Progress</button>
+                <span class="workspace-timer" aria-hidden="true"><i data-workspace-timer></i></span>
+              </div>
+
+              <div class="workspace-panel is-active" id="ws-lessons" role="tabpanel" aria-labelledby="ws-tab-lessons">
+                <div class="ws-lesson">
+                  <p class="ws-kicker">UNIT 2 · AERODYNAMIC FORCES</p>
+                  <h4>Lift and the pressure field</h4>
+                  <p class="ws-equation"><var>L</var> = ½ <var>ρ</var> <var>v</var>² <var>S</var> <var>C</var><sub>L</sub></p>
+                  <div class="ws-lines"><i></i><i></i><i style="width: 72%"></i></div>
+                  <svg class="ws-figure" viewBox="0 0 220 80" aria-hidden="true">
+                    <path class="ws-stream" d="M4 22 C60 22 80 10 120 12 S190 22 216 22"/>
+                    <path class="ws-stream" d="M4 40 C60 40 70 26 120 28 S190 40 216 40"/>
+                    <path class="ws-stream" d="M4 58 C60 58 80 66 120 64 S190 58 216 58"/>
+                    <path class="ws-foil" d="M64 46 C80 32 130 30 168 44 C130 50 90 52 64 46 Z"/>
+                  </svg>
+                </div>
+                <p class="ws-caption">Textbook-depth lessons, built around your project.</p>
+              </div>
+
+              <div class="workspace-panel" id="ws-advisor" role="tabpanel" aria-labelledby="ws-tab-advisor" hidden>
+                <div class="ws-chat">
+                  <p class="ws-msg ws-msg-you">Is my mesh fine enough near the trailing edge?</p>
+                  <p class="ws-msg ws-msg-ai"><b>Advisor</b>Run a refinement study: halve the cell size and compare <var>C</var><sub>L</sub>. If it barely moves, you’re converged.</p>
+                  <p class="ws-typing" aria-hidden="true"><i></i><i></i><i></i></p>
+                </div>
+                <p class="ws-caption">An advisor that knows your project, your readings, and your progress.</p>
+              </div>
+
+              <div class="workspace-panel" id="ws-library" role="tabpanel" aria-labelledby="ws-tab-library" hidden>
+                <div class="ws-library">
+                  <ul class="ws-papers">
+                    <li class="is-open"><span>PDF</span>Theory of Wing Sections</li>
+                    <li><span>PDF</span>Fundamentals of Aerodynamics</li>
+                    <li><span>PDF</span>Your reading list</li>
+                  </ul>
+                  <div class="ws-page">
+                    <i></i><i></i><i class="ws-highlight"></i><i></i><i style="width: 64%"></i>
+                    <span class="ws-note">Use for validation ✓</span>
+                  </div>
+                </div>
+                <p class="ws-caption">Import PDFs, highlight, and keep notes beside the source.</p>
+              </div>
+
+              <div class="workspace-panel" id="ws-notebook" role="tabpanel" aria-labelledby="ws-tab-notebook" hidden>
+                <div class="ws-notebook">
+                  <p class="ws-hand">Week 6 — <span>C<sub>L</sub> vs. angle of attack</span></p>
+                  <svg class="ws-plot" viewBox="0 0 220 90" aria-hidden="true">
+                    <path class="ws-axis" d="M18 8 V78 H212"/>
+                    <path class="ws-curve" d="M20 72 C70 52 110 30 150 20 C170 16 186 22 204 40"/>
+                    <circle cx="150" cy="20" r="3.5"/>
+                  </svg>
+                  <p class="ws-hand ws-hand-small">stall near 15° → check against reference data</p>
+                </div>
+                <p class="ws-caption">Text, sketches, and equations in one research notebook.</p>
+              </div>
+
+              <div class="workspace-panel" id="ws-track" role="tabpanel" aria-labelledby="ws-tab-track" hidden>
+                <div class="ws-track">
+                  <div class="ws-track-line"><i></i></div>
+                  <ol>
+                    <li class="is-done"><span></span>Foundations</li>
+                    <li class="is-done"><span></span>Methods</li>
+                    <li class="is-current"><span></span>Build</li>
+                    <li><span></span>Publish</li>
+                  </ol>
+                  <div class="ws-checks">
+                    <span class="is-pass">Quiz ✓</span>
+                    <span class="is-pass">Reading check ✓</span>
+                    <span>Homework</span>
+                  </div>
+                </div>
+                <p class="ws-caption">Checkpoints unlock each step, so progress is real.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a class="process-register sketch-cta" href="https://tally.so/r/VppXWv?fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAadMCktHfGu_B7Ss2otcsTITd8fbgHAADUqcKLJmrdyJl_mdKVUUmWXJt0Fdzg_aem_FYqhgGGfs26yFqMbzpCalw" target="_blank" rel="noopener noreferrer" data-reveal>Register interest in a future cohort <span aria-hidden="true">↗</span></a>
       </div>
     </section>
 
     <section class="resume-section" id="resume-example" aria-labelledby="resume-title">
-      <div class="resume-intro page-width">
+      <div class="resume-intro page-width" data-reveal>
         <p class="eyebrow"><span>003/</span> RESUME EXAMPLE</p>
         <h2 id="resume-title">See the <em class="resume-title-red">effect</em> that one <span class="resume-title-green">computational research project</span> can have for you.</h2>
       </div>
 
-      <div class="resume-comparison page-width">
+      <div class="resume-comparison page-width" data-reveal>
         <article class="resume-side">
           <p class="resume-caption"><span>BEFORE</span><span>No modeling project yet</span></p>
           <div class="resume-document" tabindex="0" aria-label="Illustrative one page resume before adding computational research experience">
@@ -174,7 +268,7 @@
         <div class="resume-transition" aria-label="The project experience appears in the resume example">
           <svg viewBox="0 0 100 72" role="img" aria-labelledby="arrow-title">
             <title id="arrow-title">A research project moves the resume from before to after</title>
-            <path class="transition-line" d="M7 36 C30 27 56 28 81 37 M70 29 Q76 35 84 38 Q77 41 71 47"></path>
+            <path class="transition-line" pathLength="1" d="M7 36 C30 27 56 28 81 37 M70 29 Q76 35 84 38 Q77 41 71 47"></path>
           </svg>
         </div>
 
@@ -228,6 +322,11 @@
             <p class="resume-footnote">ILLUSTRATIVE SAMPLE · AFTER SCALESTEM</p>
           </div>
         </article>
+      </div>
+
+      <div class="closing-cta page-width" data-reveal>
+        <p>Your project starts with one questionnaire.</p>
+        <a class="sketch-cta" href="https://tally.so/r/VppXWv?fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAadMCktHfGu_B7Ss2otcsTITd8fbgHAADUqcKLJmrdyJl_mdKVUUmWXJt0Fdzg_aem_FYqhgGGfs26yFqMbzpCalw" target="_blank" rel="noopener noreferrer">Register for a cohort <span aria-hidden="true">↗</span></a>
       </div>
     </section>
 
