@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-/x7W7R75k8Roq0WaVRQX9blP4OufE5xbAdzklGxsgpw='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-/x7W7R75k8Roq0WaVRQX9blP4OufE5xbAdzklGxsgpw='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f3f1ec">
@@ -89,134 +89,181 @@
           <h2 id="process-title">Pick your <em class="process-title-red">dream career.</em></h2>
           <p class="process-note">A clear route from your goal to work you can show.</p>
         </div>
-        <div class="workflow" aria-label="ScaleSTEM research workflow" data-reveal>
-          <article class="workflow-card workflow-intake">
-            <p class="workflow-step"><span>01</span> START HERE</p>
-            <h3>Set your direction</h3>
-            <div class="intake-sheet">
-              <div class="intake-line"><span>Career goal</span><strong>Modeling &amp; simulation</strong></div>
-              <div class="intake-line"><span>Starting point</span><strong>Python · engineering</strong></div>
-              <div class="intake-line"><span>Build next</span><strong class="intake-gap">Modeling evidence</strong></div>
-              <div class="intake-progress"><i></i></div>
-              <small>YOUR QUESTIONNAIRE → PROJECT BRIEF</small>
-            </div>
-            <p class="workflow-caption">Your interests and experience shape the project direction.</p>
-          </article>
-          <div class="workflow-link" aria-hidden="true"><svg viewBox="0 0 76 24"><path pathLength="1" d="M3 12 C24 8 47 8 67 12 M57 5 Q63 10 70 12 Q64 15 58 20"/></svg></div>
-          <article class="workflow-card workflow-advisor">
-            <p class="workflow-step"><span>02</span> 3–6 MONTHS · GUIDED RESEARCH</p>
-            <h3>Plan, model, refine</h3>
-            <div class="advisor-flow">
-              <div class="advisor-node"><span class="advisor-node-mark">AI</span><strong>Research advisor</strong><small>Scope · methods · milestones</small></div>
-              <div class="advisor-timeline"><span>M1–2</span><i></i><span>M3–4</span><i></i><span>M5–6</span></div>
-              <div class="advisor-milestones"><span>Scope the question</span><span>Build the model</span><span>Review findings</span></div>
-            </div>
-            <p class="workflow-caption">Get a structured plan, then make progress with research guidance.</p>
-          </article>
-          <div class="workflow-link" aria-hidden="true"><svg viewBox="0 0 76 24"><path pathLength="1" d="M3 12 C24 8 47 8 67 12 M57 5 Q63 10 70 12 Q64 15 58 20"/></svg></div>
-          <article class="workflow-card workflow-artifacts">
-            <p class="workflow-step"><span>03</span> WHAT YOU MAKE</p>
-            <h3>Publish work you can show</h3>
-            <div class="artifact-stack">
-              <div class="github-repo">
-                <div class="repo-topline"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.53v-2.06c-3.1.67-3.75-1.32-3.75-1.32-.5-1.29-1.24-1.64-1.24-1.64-1.01-.69.08-.68.08-.68 1.12.08 1.7 1.15 1.7 1.15 1 .1.77 2.47 3.53 2.64.1-.72.39-1.21.7-1.49-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.11-1.44 3.05-1.14 3.05-1.14.61 1.54.23 2.68.11 2.96.72.78 1.15 1.78 1.15 3 0 4.29-2.61 5.23-5.1 5.51.4.35.75 1.03.75 2.08V22c0 .29.2.63.76.53A11.1 11.1 0 0 0 12 .9Z"/></svg><span>GitHub repository</span><b>Public</b></div>
-                <strong class="repo-name">jordanlee / teardrop-airfoil-cfd</strong>
-                <div class="repo-meta"><span><i></i> Python</span><span>README.md</span></div>
-                <div class="repo-file"><span class="file-mark">▤</span><strong>README.md</strong><small>Project overview &amp; methods</small></div>
-                <div class="repo-file"><span class="file-mark file-code">{ }</span><strong>airfoil_flow_model.py</strong><small>Model &amp; simulation</small></div>
-                <div class="repo-file"><span class="file-mark file-chart">▥</span><strong>flow_visualizations/</strong><small>Streamlines &amp; results</small></div>
-              </div>
-              <div class="report-card"><div class="report-icon">PDF</div><div><strong>Technical report</strong><small>Reviewed findings · methods · results</small></div><span class="report-check" aria-hidden="true">✓</span></div>
-              <div class="resume-proof"><span class="resume-proof-check" aria-hidden="true">✓</span><div><small>RESUME EVIDENCE</small><strong>Modeled airflow around a teardrop airfoil in Python and validated the simulation.</strong></div></div>
-            </div>
-          </article>
-        </div>
+        <div class="story" data-story>
+          <ol class="story-steps">
+            <li class="story-step is-active" data-step="0">
+              <span class="story-num">01</span>
+              <h3>Tell us where you’re headed.</h3>
+              <p>A short questionnaire on your goal, your background and your time. It turns into a project that fits you.</p>
+            </li>
+            <li class="story-step" data-step="1">
+              <span class="story-num">02</span>
+              <h3>Get a real research project.</h3>
+              <p>A computational project scoped to 3–6 months, with its own workspace and milestones.</p>
+            </li>
+            <li class="story-step" data-step="2">
+              <span class="story-num">03</span>
+              <h3>Learn exactly what it needs.</h3>
+              <p>A course built around your project. Each lesson unlocks when you pass the one before it.</p>
+            </li>
+            <li class="story-step" data-step="3">
+              <span class="story-num">04</span>
+              <h3>Study at textbook depth.</h3>
+              <p>Lessons with equations and diagrams, then a quiz, a reading check and homework before you move on.</p>
+            </li>
+            <li class="story-step" data-step="4">
+              <span class="story-num">05</span>
+              <h3>Never get stuck alone.</h3>
+              <p>An advisor that knows your project and your lesson, beside a library for your papers and highlights.</p>
+            </li>
+            <li class="story-step" data-step="5">
+              <span class="story-num">06</span>
+              <h3>Build the model.</h3>
+              <p>Keep your notes, sketches and equations in one research notebook while the simulation comes together.</p>
+            </li>
+            <li class="story-step" data-step="6">
+              <span class="story-num">07</span>
+              <h3>Publish work you can show.</h3>
+              <p>A public GitHub repository and a technical report: proof for your next application.</p>
+            </li>
+            <li class="story-step" data-step="7">
+              <span class="story-num">08</span>
+              <h3>Put it on your résumé.</h3>
+              <p>The project becomes a line you can stand behind, with the code and the report one link away.</p>
+            </li>
+          </ol>
 
-        <div class="workspace" data-workspace data-reveal>
-          <p class="workspace-eyebrow eyebrow"><span>INSIDE</span> THE WORKSPACE</p>
-          <div class="workspace-window">
-            <div class="workspace-bar" aria-hidden="true"><i></i><i></i><i></i><span>scalestem · teardrop-airfoil-cfd</span></div>
-            <div class="workspace-body">
-              <div class="workspace-tabs" role="tablist" aria-label="Workspace tools">
-                <button type="button" role="tab" id="ws-tab-lessons" aria-controls="ws-lessons" aria-selected="true" data-workspace-tab><span class="ws-icon" aria-hidden="true">§</span>Lessons</button>
-                <button type="button" role="tab" id="ws-tab-advisor" aria-controls="ws-advisor" aria-selected="false" tabindex="-1" data-workspace-tab><span class="ws-icon" aria-hidden="true">AI</span>Advisor</button>
-                <button type="button" role="tab" id="ws-tab-library" aria-controls="ws-library" aria-selected="false" tabindex="-1" data-workspace-tab><span class="ws-icon" aria-hidden="true">▤</span>Library</button>
-                <button type="button" role="tab" id="ws-tab-notebook" aria-controls="ws-notebook" aria-selected="false" tabindex="-1" data-workspace-tab><span class="ws-icon" aria-hidden="true">✎</span>Notebook</button>
-                <button type="button" role="tab" id="ws-tab-track" aria-controls="ws-track" aria-selected="false" tabindex="-1" data-workspace-tab><span class="ws-icon" aria-hidden="true">✓</span>Progress</button>
-                <span class="workspace-timer" aria-hidden="true"><i data-workspace-timer></i></span>
+          <div class="story-stage">
+            <div class="device" data-device aria-label="The ScaleSTEM workspace" role="img">
+              <div class="device-bar" aria-hidden="true">
+                <span class="device-logo">Scale<i>Stem</i></span>
+                <span class="device-file">resume.tex <em>Compiled</em></span>
+                <span class="device-nav">
+                  <b data-nav="0 1 6">Research dashboard</b>
+                  <b data-nav="2 3">Learning plan</b>
+                  <b data-nav="4">Reading</b>
+                  <b data-nav="5">Notebook</b>
+                  <b data-nav="4">Research Advisor</b>
+                </span>
               </div>
+              <div class="device-screen" aria-hidden="true">
 
-              <div class="workspace-panel is-active" id="ws-lessons" role="tabpanel" aria-labelledby="ws-tab-lessons">
-                <div class="ws-lesson">
-                  <p class="ws-kicker">UNIT 2 · AERODYNAMIC FORCES</p>
-                  <h4>Lift and the pressure field</h4>
-                  <p class="ws-equation"><var>L</var> = ½ <var>ρ</var> <var>v</var>² <var>S</var> <var>C</var><sub>L</sub></p>
-                  <div class="ws-lines"><i></i><i></i><i style="width: 72%"></i></div>
-                  <svg class="ws-figure" viewBox="0 0 220 80" aria-hidden="true">
-                    <path class="ws-stream" d="M4 22 C60 22 80 10 120 12 S190 22 216 22"/>
-                    <path class="ws-stream" d="M4 40 C60 40 70 26 120 28 S190 40 216 40"/>
-                    <path class="ws-stream" d="M4 58 C60 58 80 66 120 64 S190 58 216 58"/>
-                    <path class="ws-foil" d="M64 46 C80 32 130 30 168 44 C130 50 90 52 64 46 Z"/>
-                  </svg>
+                <div class="scene scene-intake is-active" data-scene="0">
+                  <p class="sc-kicker">Onboarding</p>
+                  <h4 class="sc-title">Where are you headed?</h4>
+                  <div class="sc-field"><span>Career goal</span><b data-type="Aerospace engineering, modeling and simulation"></b></div>
+                  <div class="sc-field"><span>Background</span><b data-type="Python, intro fluid mechanics, linear algebra"></b></div>
+                  <div class="sc-field"><span>Time each week</span><b data-type="6 hours"></b></div>
+                  <span class="sc-button">Build my project</span>
                 </div>
-                <p class="ws-caption">Textbook-depth lessons, built around your project.</p>
-              </div>
 
-              <div class="workspace-panel" id="ws-advisor" role="tabpanel" aria-labelledby="ws-tab-advisor" hidden>
-                <div class="ws-chat">
-                  <p class="ws-msg ws-msg-you">Is my mesh fine enough near the trailing edge?</p>
-                  <p class="ws-msg ws-msg-ai"><b>Advisor</b>Run a refinement study: halve the cell size and compare <var>C</var><sub>L</sub>. If it barely moves, you’re converged.</p>
-                  <p class="ws-typing" aria-hidden="true"><i></i><i></i><i></i></p>
-                </div>
-                <p class="ws-caption">An advisor that knows your project, your readings, and your progress.</p>
-              </div>
-
-              <div class="workspace-panel" id="ws-library" role="tabpanel" aria-labelledby="ws-tab-library" hidden>
-                <div class="ws-library">
-                  <ul class="ws-papers">
-                    <li class="is-open"><span>PDF</span>Theory of Wing Sections</li>
-                    <li><span>PDF</span>Fundamentals of Aerodynamics</li>
-                    <li><span>PDF</span>Your reading list</li>
-                  </ul>
-                  <div class="ws-page">
-                    <i></i><i></i><i class="ws-highlight"></i><i></i><i style="width: 64%"></i>
-                    <span class="ws-note">Use for validation ✓</span>
-                  </div>
-                </div>
-                <p class="ws-caption">Import PDFs, highlight, and keep notes beside the source.</p>
-              </div>
-
-              <div class="workspace-panel" id="ws-notebook" role="tabpanel" aria-labelledby="ws-tab-notebook" hidden>
-                <div class="ws-notebook">
-                  <p class="ws-hand">Week 6 — <span>C<sub>L</sub> vs. angle of attack</span></p>
-                  <svg class="ws-plot" viewBox="0 0 220 90" aria-hidden="true">
-                    <path class="ws-axis" d="M18 8 V78 H212"/>
-                    <path class="ws-curve" d="M20 72 C70 52 110 30 150 20 C170 16 186 22 204 40"/>
-                    <circle cx="150" cy="20" r="3.5"/>
-                  </svg>
-                  <p class="ws-hand ws-hand-small">stall near 15° → check against reference data</p>
-                </div>
-                <p class="ws-caption">Text, sketches, and equations in one research notebook.</p>
-              </div>
-
-              <div class="workspace-panel" id="ws-track" role="tabpanel" aria-labelledby="ws-tab-track" hidden>
-                <div class="ws-track">
-                  <div class="ws-track-line"><i></i></div>
-                  <ol>
-                    <li class="is-done"><span></span>Foundations</li>
-                    <li class="is-done"><span></span>Methods</li>
-                    <li class="is-current"><span></span>Build</li>
-                    <li><span></span>Publish</li>
+                <div class="scene scene-project" data-scene="1">
+                  <div class="sc-banner"><img src="assets/platform/project-banner.webp" alt="" width="1200" height="800" loading="lazy" decoding="async"><span>Your project</span></div>
+                  <h4 class="sc-title">Computational aerodynamics: teardrop airfoil</h4>
+                  <ol class="sc-track">
+                    <li class="is-done"><i></i>Foundations</li>
+                    <li class="is-current"><i></i>Methods</li>
+                    <li><i></i>Build</li>
+                    <li><i></i>Publish</li>
                   </ol>
-                  <div class="ws-checks">
-                    <span class="is-pass">Quiz ✓</span>
-                    <span class="is-pass">Reading check ✓</span>
-                    <span>Homework</span>
+                </div>
+
+                <div class="scene scene-roadmap" data-scene="2">
+                  <div class="sc-module">
+                    <div><p class="sc-kicker">Module 1 · 8 lessons</p><h4 class="sc-title">Computational fluid dynamics</h4></div>
+                    <div class="sc-progress"><small>3 of 8 lessons complete</small><i><b></b></i></div>
+                  </div>
+                  <ol class="sc-units">
+                    <li class="is-done"><span>✓</span>Incompressible Navier–Stokes equations<em>Complete</em></li>
+                    <li class="is-done"><span>✓</span>Finite volume method basics<em>Complete</em></li>
+                    <li class="is-done"><span>✓</span>Mesh generation and data structures<em>Complete</em></li>
+                    <li class="is-current"><span>4</span>Adaptive mesh refinement principles<em>Next lesson</em></li>
+                    <li class="is-locked"><span></span>Refinement criteria in incompressible CFD<em>Locked</em></li>
+                    <li class="is-locked"><span></span>Flow solution algorithms and stability<em>Locked</em></li>
+                  </ol>
+                </div>
+
+                <div class="scene scene-lesson" data-scene="3">
+                  <p class="sc-kicker">Lesson 4</p>
+                  <h4 class="sc-title">Adaptive mesh refinement principles</h4>
+                  <div class="sc-lesson">
+                    <div class="sc-figure"><img src="assets/platform/lesson-adaptive-mesh-refinement-principles.webp" alt="" width="900" height="900" loading="lazy" decoding="async"></div>
+                    <div class="sc-lesson-side">
+                      <p class="sc-eq">∇ · <b>u</b> = 0</p>
+                      <p class="sc-eq">∂<b>u</b>/∂<i>t</i> + (<b>u</b> · ∇)<b>u</b> = −∇<i>p</i>/<i>ρ</i> + <i>ν</i>∇²<b>u</b></p>
+                      <span class="sc-lines"><i></i><i></i><i></i></span>
+                      <span class="sc-checks"><b class="is-pass">Quiz ✓</b><b class="is-pass">Reading check ✓</b><b>Homework</b></span>
+                    </div>
                   </div>
                 </div>
-                <p class="ws-caption">Checkpoints unlock each step, so progress is real.</p>
+
+                <div class="scene scene-advisor" data-scene="4">
+                  <div class="sc-paper">
+                    <p class="sc-kicker">Reading</p>
+                    <p class="sc-paper-title">Refinement criteria in incompressible CFD</p>
+                    <img src="assets/platform/lesson-refinement-criteria-in-incompressible-cfd.webp" alt="" width="900" height="900" loading="lazy" decoding="async">
+                    <p class="sc-paper-text">Cells are flagged for refinement <mark>where the vorticity gradient exceeds a tolerance</mark>, concentrating resolution in the wake.</p>
+                  </div>
+                  <div class="sc-chat">
+                    <p class="sc-kicker">Research Advisor</p>
+                    <p class="sc-msg sc-msg-you">How do I know where my mesh needs refining?</p>
+                    <p class="sc-msg sc-msg-ai">Flag cells where the vorticity gradient is large, like the wake behind your airfoil. Refine those, then compare lift before and after.</p>
+                    <p class="sc-typing"><i></i><i></i><i></i></p>
+                  </div>
+                </div>
+
+                <div class="scene scene-notebook" data-scene="5">
+                  <div class="sc-note">
+                    <p class="sc-kicker">Notebook</p>
+                    <p class="sc-hand">Week 7: refine the wake, rerun.</p>
+                    <pre class="sc-code"><span>mesh</span> = refine(mesh, where=<span>vorticity</span> &gt; tol)
+<span>flow</span> = solve(mesh, re=<span>2e5</span>)
+plot_streamlines(<span>flow</span>)</pre>
+                  </div>
+                  <div class="sc-sim">
+                    <video data-sim muted loop playsinline preload="none" poster="assets/flow-model-poster.webp" width="1280" height="800">
+                      <source src="assets/flow-model.mp4" type="video/mp4">
+                    </video>
+                    <span>Simulation output</span>
+                  </div>
+                </div>
+
+                <div class="scene scene-publish" data-scene="6">
+                  <div class="sc-repo">
+                    <p class="sc-repo-top"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.53v-2.06c-3.1.67-3.75-1.32-3.75-1.32-.5-1.29-1.24-1.64-1.24-1.64-1.01-.69.08-.68.08-.68 1.12.08 1.7 1.15 1.7 1.15 1 .1.77 2.47 3.53 2.64.1-.72.39-1.21.7-1.49-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.11-1.44 3.05-1.14 3.05-1.14.61 1.54.23 2.68.11 2.96.72.78 1.15 1.78 1.15 3 0 4.29-2.61 5.23-5.1 5.51.4.35.75 1.03.75 2.08V22c0 .29.2.63.76.53A11.1 11.1 0 0 0 12 .9Z"/></svg>jordanlee / <b>teardrop-airfoil-cfd</b><em>Public</em></p>
+                    <p class="sc-file"><span>▤</span>README.md<small>Overview and methods</small></p>
+                    <p class="sc-file"><span>{ }</span>amr_solver.py<small>Model and simulation</small></p>
+                    <p class="sc-file"><span>▥</span>results/<small>Streamlines and lift data</small></p>
+                  </div>
+                  <div class="sc-report"><span>PDF</span><b>Technical report</b><small>Methods, results and validation</small><i>✓</i></div>
+                  <p class="sc-hand sc-proof">→ goes straight on your résumé</p>
+                </div>
+
+                <div class="scene scene-latex" data-scene="7">
+                  <pre class="sc-tex"><span><i>\section</i>{Selected Projects}</span>
+<span><i>\entry</i>{Computational Aerodynamics: Teardrop Airfoil}{3 months}</span>
+<span><i>\begin</i>{itemize}</span>
+<span>  <i>\item</i> Built and validated a Python airfoil model, simulating airflow.</span>
+<span>  <i>\item</i> Documented methods and results in a technical report.</span>
+<span><i>\end</i>{itemize}</span></pre>
+                  <div class="sc-pdf">
+                    <p class="sc-pdf-name">Jordan Lee <small>jordan.lee@example.edu · github.com/jordanlee</small></p>
+                    <p class="sc-pdf-h">Education</p>
+                    <p class="sc-pdf-row"><b>B.S. Mechanical Engineering, Western Plains University</b><span>2027</span></p>
+                    <p class="sc-pdf-h">Selected projects</p>
+                    <div class="sc-pdf-new">
+                      <p class="sc-pdf-row"><b>Computational Aerodynamics: Teardrop Airfoil</b><span>3 months</span></p>
+                      <ul><li>Built and validated a Python airfoil model, simulating airflow.</li><li>Documented methods and results in a technical report.</li></ul>
+                    </div>
+                    <p class="sc-pdf-row sc-pdf-old"><b>Microcontroller Temperature Logger</b><span>2025</span></p>
+                    <p class="sc-pdf-h">Technical skills</p>
+                    <p class="sc-pdf-line"><b>Modeling:</b> computational aerodynamics, airflow simulation</p>
+                  </div>
+                </div>
+
               </div>
             </div>
+            <ol class="story-rail" aria-hidden="true"><li class="is-active"></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ol>
           </div>
         </div>
 
@@ -230,60 +277,19 @@
         <h2 id="resume-title">See the <em class="resume-title-red">effect</em> that one <span class="resume-title-green">computational research project</span> can have for you.</h2>
       </div>
 
-      <div class="resume-comparison page-width" data-reveal>
-        <article class="resume-side">
-          <p class="resume-caption"><span>BEFORE</span><span>No modeling project yet</span></p>
-          <div class="resume-document" tabindex="0" aria-label="Illustrative one page resume before adding computational research experience">
-            <header class="resume-header">
-              <div><h3>Jordan Lee</h3><p>Mechanical Engineering · Modeling &amp; Simulation</p></div>
-              <p class="resume-contact">Denver, CO<br>jordan.lee@example.edu<br>github.com/jordanlee</p>
-            </header>
-            <div class="resume-content">
-              <section class="resume-block resume-muted">
-                <h4>Education</h4>
-                <div class="resume-entry"><strong>Western Plains University</strong><span>May 2027</span></div>
-                <p>B.S. Mechanical Engineering · GPA 3.62/4.00</p>
-                <p class="resume-detail">Coursework: Numerical Methods, Dynamics, Thermodynamics, Linear Algebra</p>
-              </section>
-              <section class="resume-block resume-muted">
-                <h4>Research experience</h4>
-                <div class="resume-entry"><strong>Undergraduate Lab Assistant</strong><span>2025 to Present</span></div>
-                <p class="resume-subtitle">Energy Systems Lab</p>
-                <ul><li>Prepare sensor assemblies and organize experimental readings for weekly lab review.</li><li>Maintain lab notes and create plots from collected datasets in Python and MATLAB.</li></ul>
-              </section>
-              <section class="resume-block resume-muted">
-                <h4>Selected projects</h4>
-                <div class="resume-entry"><strong>Microcontroller Temperature Logger</strong><span>Fall 2025</span></div>
-                <ul><li>Built an Arduino temperature logger and summarized readings from a short lab study.</li></ul>
-                <div class="resume-entry"><strong>Mechanism Design Study</strong><span>Spring 2025</span></div>
-                <ul><li>Modeled a linkage assembly in SolidWorks and documented design constraints.</li></ul>
-              </section>
-              <section class="resume-block resume-muted">
-                <h4>Technical skills</h4>
-                <p><strong>Programming:</strong> Python, MATLAB, C++</p>
-                <p><strong>Tools:</strong> Git, Jupyter, SolidWorks</p>
-                <p><strong>Methods:</strong> Data cleaning, visualization, lab documentation</p>
-              </section>
-              <section class="resume-block resume-muted resume-last">
-                <h4>Campus involvement</h4>
-                <div class="resume-entry"><strong>Peer Tutor, Engineering Learning Center</strong><span>2025 to Present</span></div>
-                <p>Support first-year students in statics and introductory programming.</p>
-              </section>
-            </div>
-            <p class="resume-footnote">ILLUSTRATIVE SAMPLE · BEFORE SCALESTEM</p>
+      <div class="morph" data-morph>
+        <div class="morph-stage page-width">
+          <div class="morph-side">
+            <p class="morph-label"><span class="morph-before">Before</span><span class="morph-after">After</span></p>
+            <div class="morph-bar" aria-hidden="true"><i></i></div>
+            <ol class="morph-list">
+              <li data-at="1"><span aria-hidden="true">✓</span>A real research project</li>
+              <li data-at="2"><span aria-hidden="true">✓</span>Code and a report behind it</li>
+              <li data-at="3"><span aria-hidden="true">✓</span>A new modeling skill</li>
+            </ol>
+            <p class="morph-hint">Keep scrolling to add the project.</p>
           </div>
-        </article>
-
-        <div class="resume-transition" aria-label="The project experience appears in the resume example">
-          <svg viewBox="0 0 100 72" role="img" aria-labelledby="arrow-title">
-            <title id="arrow-title">A research project moves the resume from before to after</title>
-            <path class="transition-line" pathLength="1" d="M7 36 C30 27 56 28 81 37 M70 29 Q76 35 84 38 Q77 41 71 47"></path>
-          </svg>
-        </div>
-
-        <article class="resume-side resume-side-after">
-          <p class="resume-caption"><span>AFTER</span><span>With ScaleSTEM research</span></p>
-          <div class="resume-document resume-document-after" tabindex="0" aria-label="Illustrative one page resume after adding a ScaleSTEM computational research project">
+          <div class="resume-document morph-doc" tabindex="0" aria-label="Illustrative one page resume, shown before and after adding a ScaleSTEM computational research project">
             <header class="resume-header">
               <div><h3>Jordan Lee</h3><p>Mechanical Engineering · Modeling &amp; Simulation</p></div>
               <p class="resume-contact">Denver, CO<br>jordan.lee@example.edu<br>github.com/jordanlee</p>
@@ -303,9 +309,9 @@
               </section>
               <section class="resume-block">
                 <h4>Selected projects</h4>
-                <div class="resume-entry resume-change"><strong>Computational Aerodynamics: Teardrop Airfoil</strong><span>3 months</span></div>
-                <p class="resume-subtitle resume-change-subtitle">ScaleSTEM Guided Research</p>
-                <ul class="resume-change-list"><li>Built and validated a Python airfoil model, simulating airflow around an aerodynamic teardrop.</li><li>Documented methods, validation, and streamline results in a technical report reviewed with mentor feedback.</li></ul>
+                <div class="grow" data-at="1"><div><div class="resume-entry resume-change"><strong>Computational Aerodynamics: Teardrop Airfoil</strong><span>3 months</span></div>
+                <p class="resume-subtitle resume-change-subtitle">ScaleSTEM Guided Research</p></div></div>
+                <div class="grow" data-at="2"><div><ul class="resume-change-list"><li>Built and validated a Python airfoil model, simulating airflow around an aerodynamic teardrop.</li><li>Documented methods, validation, and streamline results in a technical report reviewed with mentor feedback.</li></ul></div></div>
                 <div class="resume-muted">
                   <div class="resume-entry"><strong>Microcontroller Temperature Logger</strong><span>Fall 2025</span></div>
                   <ul><li>Built an Arduino temperature logger and summarized readings from a short lab study.</li></ul>
@@ -320,7 +326,7 @@
                   <p><strong>Tools:</strong> Git, Jupyter, SolidWorks</p>
                   <p><strong>Methods:</strong> Data cleaning, visualization, lab documentation</p>
                 </div>
-                <p class="resume-change-skill"><strong>Modeling:</strong> Computational aerodynamics, airflow simulation</p>
+                <div class="grow" data-at="3"><div><p class="resume-change-skill"><strong>Modeling:</strong> Computational aerodynamics, airflow simulation</p></div></div>
               </section>
               <section class="resume-block resume-muted resume-last">
                 <h4>Campus involvement</h4>
@@ -328,9 +334,9 @@
                 <p>Support first-year students in statics and introductory programming.</p>
               </section>
             </div>
-            <p class="resume-footnote">ILLUSTRATIVE SAMPLE · AFTER SCALESTEM</p>
+            <p class="resume-footnote">ILLUSTRATIVE SAMPLE · <span data-morph-word>BEFORE</span> SCALESTEM</p>
           </div>
-        </article>
+        </div>
       </div>
 
       <div class="closing-cta page-width" data-reveal>
