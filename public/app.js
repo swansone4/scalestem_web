@@ -147,6 +147,7 @@ if (story) {
     rail.forEach((dot, i) => { dot.classList.toggle('is-active', i === index); dot.classList.toggle('is-done', i < index); });
     navItems.forEach((item) => item.classList.toggle('is-on', item.dataset.nav.split(' ').includes(String(index))));
     device?.classList.toggle('is-doc', index === 7);
+    document.dispatchEvent(new CustomEvent('story:step', { detail: index }));
     if (index === 0) typeIntake();
     if (sim) {
       if (index === 5 && !reducedMotion.matches) {
@@ -223,6 +224,7 @@ if (morph) {
     grows.forEach((el) => el.classList.toggle('is-on', Number(el.dataset.at) <= stage));
     ticks.forEach((el) => el.classList.toggle('is-on', Number(el.dataset.at) <= stage));
     morph.classList.toggle('is-started', stage > 0);
+    document.dispatchEvent(new CustomEvent('morph:stage', { detail: stage }));
     morph.classList.toggle('is-after', stage >= 4);
     if (word) word.textContent = stage >= 4 ? 'AFTER' : 'BEFORE';
   };
@@ -247,4 +249,97 @@ if (morph) {
   window.addEventListener('resize', () => { fit(); update(); });
   fit();
   update();
+}
+
+const mascotTemplate = document.getElementById('mascot-template');
+const mascots = [...document.querySelectorAll('[data-mascot]')];
+if (mascotTemplate && mascots.length) {
+  mascots.forEach((mascot) => mascot.append(mascotTemplate.content.cloneNode(true)));
+
+  // Each robot keeps its own lines; a click or tap pokes it (the hover animation, for touch too) and speaks.
+  const speak = (bubble, text, ms = 2800) => {
+    if (!bubble) return;
+    bubble.textContent = text;
+    bubble.classList.add('is-on');
+    window.clearTimeout(bubble.hideTimer);
+    bubble.hideTimer = window.setTimeout(() => bubble.classList.remove('is-on'), ms);
+  };
+  mascots.forEach((mascot) => {
+    const lines = mascot.dataset.lines.split('|');
+    const bubble = mascot.parentElement.querySelector('.mascot-bubble');
+    let line = 0;
+    mascot.addEventListener('click', () => {
+      mascot.classList.remove('is-poked');
+      void mascot.offsetWidth;
+      mascot.classList.add('is-poked');
+      window.setTimeout(() => mascot.classList.remove('is-poked'), 1000);
+      speak(bubble, lines[line % lines.length]);
+      line += 1;
+    });
+  });
+
+  // Eyes follow the pointer, a few units inside the visor.
+  if (!reducedMotion.matches && window.matchMedia('(pointer: fine)').matches) {
+    let pointer = null;
+    let lookQueued = false;
+    const look = () => {
+      lookQueued = false;
+      mascots.forEach((mascot) => {
+        const box = mascot.getBoundingClientRect();
+        if (!box.width || box.bottom < 0 || box.top > window.innerHeight) return;
+        const dx = pointer.x - (box.left + box.width * 0.53);
+        const dy = pointer.y - (box.top + box.height * 0.56);
+        const d = Math.hypot(dx, dy) || 1;
+        const reach = Math.min(d / 260, 1);
+        mascot.style.setProperty('--ex', `${(dx / d) * reach * 3.4}px`);
+        mascot.style.setProperty('--ey', `${(dy / d) * reach * 2.2}px`);
+      });
+    };
+    window.addEventListener('pointermove', (event) => {
+      pointer = { x: event.clientX, y: event.clientY };
+      if (lookQueued) return;
+      lookQueued = true;
+      window.requestAnimationFrame(look);
+    }, { passive: true });
+  }
+
+  // The guide: shown between the hero robot and the closing robot, commenting on the story and the résumé.
+  const guide = document.querySelector('[data-guide]');
+  if (guide && 'IntersectionObserver' in window) {
+    const guideBubble = guide.querySelector('.mascot-bubble');
+    const anchors = [...document.querySelectorAll('.mascot-hero, .mascot-closing')];
+    const inView = new Set();
+    let passedHero = false;
+    new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) inView.add(entry.target); else inView.delete(entry.target);
+        if (entry.target.classList.contains('mascot-hero')) passedHero = !entry.isIntersecting && entry.boundingClientRect.top < 0;
+      });
+      guide.classList.toggle('is-on', passedHero && inView.size === 0);
+    }).observe(anchors[0]);
+    anchors.slice(1).forEach((anchor) => new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) inView.add(anchor); else inView.delete(anchor);
+      guide.classList.toggle('is-on', passedHero && inView.size === 0);
+    }).observe(anchor));
+
+    const stepLines = [
+      'It starts with a few questions about you.',
+      'That’s a project built for you.',
+      'Lessons unlock one at a time.',
+      'Pass the checkpoints, then move on.',
+      'Stuck? The advisor knows your project.',
+      'This is where the model comes together.',
+      'Code and a report. Real proof.',
+      'And there’s your résumé line.',
+    ];
+    const morphLines = [null, 'A real research project…', '…with the work behind it…', '…and a new skill.', 'Same student. Stronger résumé.'];
+    const comment = (text) => {
+      if (!text || !guide.classList.contains('is-on')) return;
+      guide.querySelector('.mascot').classList.add('is-poked');
+      window.setTimeout(() => guide.querySelector('.mascot').classList.remove('is-poked'), 1000);
+      speak(guideBubble, text, 3000);
+    };
+    document.addEventListener('story:step', (event) => comment(stepLines[event.detail]));
+    document.addEventListener('morph:stage', (event) => comment(morphLines[event.detail]));
+  }
 }

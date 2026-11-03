@@ -463,6 +463,54 @@ a:hover .arrow-circle, button:hover .arrow-circle { transform: translate(3px, -2
   .story-step p { font-size: 15px; }
 }
 
+/* The robot */
+.hero-cue { display: flex; align-items: center; gap: 18px; margin-top: 22px; }
+.hero-cue .hero-scroll { margin-top: 0; }
+.mascot-spot { position: relative; display: inline-flex; }
+.mascot { --ex: 0px; --ey: 0px; width: 100%; height: 100%; display: block; padding: 0; border: 0; background: none; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.mascot:focus-visible { outline: 2px dashed var(--accent); outline-offset: 2px; border-radius: 12px; }
+.mascot-hero { width: 104px; height: 104px; margin: -22px 0 -18px; }
+.mascot-closing { width: 128px; height: 128px; margin-bottom: 4px; }
+.m-svg { width: 100%; height: 100%; display: block; overflow: visible; }
+.m-svg * { transform-box: fill-box; }
+.m-bot { transform-origin: 50% 100%; animation: m-bob 3.2s ease-in-out infinite; }
+.m-eyes { transform: translate(var(--ex), var(--ey)); transition: transform .18s ease-out; }
+.m-eyes-open { transform-origin: 50% 50%; animation: m-blink 5s 1.2s infinite; }
+.m-eyes-happy, .m-hi, .m-sparks path { opacity: 0; }
+.m-tassel { transform-origin: 50% 0%; animation: m-sway 2.6s ease-in-out infinite; }
+.m-cursor { animation: m-caret 1s steps(1) infinite; }
+.m-cap { transform-origin: 50% 100%; }
+.m-sparks path { transform-origin: 50% 50%; }
+.mascot:hover .m-cap, .mascot.is-poked .m-cap { animation: m-toss .95s cubic-bezier(.3, .7, .4, 1); }
+.mascot:hover .m-eyes-open, .mascot.is-poked .m-eyes-open { opacity: 0; animation: none; }
+.mascot:hover .m-eyes-happy, .mascot.is-poked .m-eyes-happy { opacity: 1; }
+.mascot:hover .m-bot, .mascot.is-poked .m-bot { animation: m-hop .6s cubic-bezier(.3, .7, .4, 1); }
+.mascot:hover .m-sparks path, .mascot.is-poked .m-sparks path { animation: m-spark .7s .12s ease-out both; }
+.mascot:hover .m-sparks path:nth-child(2), .mascot.is-poked .m-sparks path:nth-child(2) { animation-delay: .2s; }
+.mascot:hover .m-sparks path:nth-child(3), .mascot.is-poked .m-sparks path:nth-child(3) { animation-delay: .28s; }
+.mascot:hover .m-cursor, .mascot.is-poked .m-cursor { opacity: 0; animation: none; }
+.mascot:hover .m-hi, .mascot.is-poked .m-hi { animation: m-type .5s .25s steps(3, end) both; }
+.mascot-bubble { position: absolute; bottom: calc(100% + 6px); left: 50%; z-index: 30; width: max-content; max-width: 230px; padding: 9px 13px; border: 1.5px solid var(--ink); border-radius: 14px 14px 14px 3px; background: var(--white); color: var(--ink); font: 500 14px/1.35 var(--hand); text-align: left; box-shadow: 0 10px 24px -12px rgba(26, 26, 24, .35); opacity: 0; pointer-events: none; transform: translate(-10%, 6px) scale(.92); transform-origin: 0 100%; transition: opacity .25s ease, transform .35s var(--ease); }
+.mascot-bubble.is-on { opacity: 1; transform: translate(-10%, 0) scale(1); }
+.mascot-closing .mascot-bubble { left: 50%; border-radius: 14px; transform: translate(-50%, 6px) scale(.92); transform-origin: 50% 100%; }
+.mascot-closing .mascot-bubble.is-on { transform: translate(-50%, 0); }
+
+/* The guide that follows you down the page (desktop) */
+.mascot-guide { position: fixed; right: 26px; bottom: 22px; z-index: 25; width: 92px; height: 92px; opacity: 0; pointer-events: none; transform: translateY(40px) rotate(4deg); transition: opacity .35s ease, transform .55s var(--ease); }
+.mascot-guide.is-on { opacity: 1; pointer-events: auto; transform: none; }
+.mascot-guide .mascot-bubble { right: 58px; left: auto; bottom: 78px; border-radius: 14px 14px 3px 14px; transform: translate(0, 6px) scale(.92); transform-origin: 100% 100%; }
+.mascot-guide .mascot-bubble.is-on { transform: none; }
+.mascot-guide::after { position: absolute; right: 10px; bottom: 4px; left: 10px; z-index: -1; height: 8px; border-radius: 50%; background: rgba(26, 26, 24, .14); content: ''; filter: blur(3px); }
+
+@keyframes m-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+@keyframes m-blink { 0%, 94%, 100% { transform: scaleY(1); } 96.5% { transform: scaleY(.1); } }
+@keyframes m-sway { 0%, 100% { transform: rotate(-6deg); } 50% { transform: rotate(7deg); } }
+@keyframes m-caret { 50% { opacity: 0; } }
+@keyframes m-toss { 0% { transform: none; } 38% { transform: translateY(-34px) rotate(-14deg); } 62% { transform: translateY(-30px) rotate(10deg); } 84% { transform: translateY(2px) rotate(-2deg); } 100% { transform: none; } }
+@keyframes m-hop { 0%, 100% { transform: none; } 30% { transform: translateY(2px) scaleY(.96); } 55% { transform: translateY(-6px); } }
+@keyframes m-spark { 0% { opacity: 0; transform: scale(.3); } 40% { opacity: 1; transform: scale(1.15); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes m-type { from { opacity: 1; clip-path: inset(0 100% 0 0); } to { opacity: 1; clip-path: inset(0); } }
+
 @keyframes hero-in { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
 @keyframes hero-art-in { from { opacity: 0; transform: translateY(24px) rotate(1.5deg) scale(.97); } }
 @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
@@ -512,7 +560,13 @@ a:hover .arrow-circle, button:hover .arrow-circle { transform: translate(3px, -2
   .problem-heading h1 { font-size: clamp(39px, 10vw, 52px); }
   .problem-heading { grid-template-columns: 1fr; gap: 22px; padding-bottom: 23px; }
   .headline-dots { margin-top: 20px; }
-  .hero-scroll { margin-top: 14px; font-size: 15px; }
+  .hero-scroll { font-size: 15px; }
+  .hero-cue { margin-top: 14px; }
+  .mascot-hero { width: 84px; height: 84px; margin: -16px 0 -14px; }
+  .mascot-hero .mascot-bubble { right: -6px; left: auto; max-width: min(220px, 70vw); border-radius: 14px 14px 3px 14px; transform: translate(0, 6px) scale(.92); transform-origin: 100% 100%; }
+  .mascot-hero .mascot-bubble.is-on { transform: none; }
+  .mascot-closing .mascot-bubble { max-width: min(230px, 80vw); }
+  .mascot-guide { display: none; }
   .cycle-sketch { grid-column: 1; grid-row: auto; justify-self: center; width: min(100%, 460px); }
   .market-ribbon { margin-bottom: 22px; padding-bottom: 11px; }
   .market-quote { width: min(78vw, 290px); min-height: 96px; padding: 7px 17px 9px; }
@@ -554,4 +608,6 @@ a:hover .arrow-circle, button:hover .arrow-circle { transform: translate(3px, -2
   .market-track { animation: none!important; }
   .device { transform: none!important; }
   .process-section::before { animation: none; }
+  .m-bot, .m-tassel, .m-eyes-open, .m-cursor { animation: none!important; }
+  .mascot:hover .m-cap, .mascot.is-poked .m-cap, .mascot:hover .m-bot, .mascot.is-poked .m-bot, .mascot:hover .m-sparks path, .mascot.is-poked .m-sparks path { animation: none!important; }
 }
