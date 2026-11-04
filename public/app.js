@@ -107,6 +107,7 @@ if (story) {
   const navItems = [...story.querySelectorAll('[data-nav]')];
   const device = story.querySelector('[data-device]');
   const sim = story.querySelector('[data-sim]');
+  const stepCount = story.querySelector('[data-step-count]');
   const intake = story.querySelector('.scene-intake');
   let current = -1;
   let typed = false;
@@ -147,6 +148,8 @@ if (story) {
     rail.forEach((dot, i) => { dot.classList.toggle('is-active', i === index); dot.classList.toggle('is-done', i < index); });
     navItems.forEach((item) => item.classList.toggle('is-on', item.dataset.nav.split(' ').includes(String(index))));
     device?.classList.toggle('is-doc', index === 7);
+    if (stepCount) stepCount.textContent = String(index + 1).padStart(2, '0');
+    device?.style.setProperty('--step-p', String((index + 1) / steps.length));
     document.dispatchEvent(new CustomEvent('story:step', { detail: index }));
     if (index === 0) typeIntake();
     if (sim) {
