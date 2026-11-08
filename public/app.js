@@ -346,3 +346,16 @@ if (mascotTemplate && mascots.length) {
     document.addEventListener('morph:stage', (event) => comment(morphLines[event.detail]));
   }
 }
+
+const demo = document.querySelector('[data-demo]');
+if (demo) {
+  const video = demo.querySelector('[data-demo-video]');
+  const start = demo.querySelector('[data-demo-start]');
+  start?.addEventListener('click', () => {
+    video.controls = true;
+    demo.classList.add('is-playing');
+    video.play().catch(() => {});
+    video.focus({ preventScroll: true });
+  });
+  video?.addEventListener('play', () => demo.classList.add('is-playing'));
+}

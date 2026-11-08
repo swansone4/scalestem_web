@@ -73,9 +73,12 @@
         </section>
 
         <div class="demo-video page-width" id="demo-video" role="region" aria-label="Demo video" data-reveal>
-          <div class="demo-video-frame">
-            <span class="demo-video-play" aria-hidden="true"></span>
-            <p>Demo video coming soon</p>
+          <div class="demo-video-frame has-video" data-demo>
+            <video class="demo-video-player" preload="none" playsinline poster="assets/scalestem-demo-poster.webp" width="1920" height="1080" data-demo-video>
+              <source src="assets/scalestem-demo.mp4" type="video/mp4">
+              <track kind="captions" src="assets/scalestem-demo.vtt" srclang="en" label="English">
+            </video>
+            <button class="demo-video-start" type="button" aria-label="Play the ScaleSTEM demo video" data-demo-start><span class="demo-video-play" aria-hidden="true"></span><span class="demo-video-label">Watch the 60-second demo</span></button>
           </div>
         </div>
 

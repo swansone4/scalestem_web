@@ -107,6 +107,14 @@ a:hover .arrow-circle, button:hover .arrow-circle { transform: translate(3px, -2
 .demo-video-play::before { position: absolute; inset: -1.5px; border: 1.5px solid var(--accent); border-radius: 50%; content: ''; animation: ring 2.8s ease-out infinite; }
 .demo-video-play::after { position: absolute; top: 50%; left: 53%; border-block: 11px solid transparent; border-left: 18px solid var(--accent); content: ''; transform: translate(-50%, -50%); }
 .demo-video-frame:hover .demo-video-play { transform: scale(1.07); }
+.demo-video-frame.has-video { aspect-ratio: 16 / 9; display: block; padding: 0; border: 1px solid var(--line); background: #f9f8f6; box-shadow: 0 30px 80px -30px rgba(34, 39, 49, .3); }
+.demo-video-player { width: 100%; height: 100%; display: block; object-fit: cover; }
+.demo-video-start { position: absolute; inset: 0; display: flex; align-items: flex-end; justify-content: flex-start; gap: 14px; padding: clamp(16px, 3vw, 30px); border: 0; background: linear-gradient(180deg, rgba(249, 248, 246, 0) 55%, rgba(249, 248, 246, .6)); cursor: pointer; transition: opacity .35s ease; }
+.demo-video-start:focus-visible { outline: 2px dashed var(--accent); outline-offset: -8px; }
+.demo-video-start:hover .demo-video-play { transform: scale(1.07); }
+.demo-video-start .demo-video-play { width: 58px; height: 58px; flex: 0 0 58px; }
+.demo-video-label { margin-bottom: 11px; padding: 8px 16px; border-radius: 999px; background: rgba(255, 254, 250, .92); color: var(--ink); font: 500 16px/1.2 var(--hand); box-shadow: 0 10px 24px -14px rgba(26, 26, 24, .4); }
+.demo-video-frame.is-playing .demo-video-start { opacity: 0; pointer-events: none; }
 
 .resume-section { padding: 38px 0 100px; }
 .resume-intro { display: grid; grid-template-columns: .34fr 1fr; gap: 12px 50px; align-items: start; margin-bottom: 38px; }
@@ -584,6 +592,9 @@ a:hover .arrow-circle, button:hover .arrow-circle { transform: translate(3px, -2
   .demo-video.page-width { width: calc(100% - 40px); }
   .demo-video-play { width: 54px; height: 54px; }
   .demo-video-frame { gap: 12px; aspect-ratio: 4 / 5; }
+  .demo-video-frame.has-video { aspect-ratio: 16 / 9; }
+  .demo-video-label { margin-bottom: 7px; font-size: 14px; }
+  .demo-video-start .demo-video-play { width: 46px; height: 46px; flex-basis: 46px; }
   .resume-section { padding: 12px 0 66px; }
   .resume-intro { display: block; margin-bottom: 28px; }
   .resume-intro .eyebrow { margin-bottom: 19px; }
