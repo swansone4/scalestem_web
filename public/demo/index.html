@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-/x7W7R75k8Roq0WaVRQX9blP4OufE5xbAdzklGxsgpw='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f1ec">
+  <meta name="description" content="Look inside the ScaleSTEM workspace: a learning plan with real lesson content, the project roadmap, the career tracker and the Commons.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ScaleSTEM">
+  <meta property="og:title" content="ScaleSTEM | Look inside the platform">
+  <meta property="og:description" content="A learning plan, a project roadmap, a career tracker and the Commons, in one interactive preview.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="../assets/cohort-mark.svg" type="image/svg+xml">
+  <title>ScaleSTEM | Look inside the platform</title>
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../pages.css">
+  <script defer src="../app.js"></script>
+  <script defer src="../pages.js"></script>
+</head>
+<body class="subpage">
+  <header class="site-header" id="top" data-header>
+    <a class="brand" href="../" aria-label="ScaleSTEM home">ScaleSTEM<span class="brand-period">.</span></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav"><span></span><span></span></button>
+    <nav class="nav" id="site-nav" aria-label="Main navigation">
+      <a href="../#process">The pathway</a>
+      <a href="./" class="is-current" aria-current="page">Demo</a>
+      <a href="../faq/">FAQ</a>
+    </nav>
+    <a class="nav-apply" href="https://tally.so/r/VppXWv?fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAadMCktHfGu_B7Ss2otcsTITd8fbgHAADUqcKLJmrdyJl_mdKVUUmWXJt0Fdzg_aem_FYqhgGGfs26yFqMbzpCalw" target="_blank" rel="noopener noreferrer">Register interest <img src="../assets/cohort-mark.svg" alt=""></a>
+    <span class="scroll-progress" data-scroll-progress aria-hidden="true"></span>
+  </header>
+
+  <main class="demo-page">
+    <section class="demo-intro page-width">
+      <div>
+        <p class="eyebrow hero-in" style="--d: 0s"><span>DEMO/</span> INSIDE THE PLATFORM</p>
+        <h1 class="hero-in" style="--d: .1s">Look <em>inside</em> the workspace.</h1>
+        <p class="demo-lede hero-in" style="--d: .2s">One student’s project, four rooms. Click around: open a lesson, move the refinement slider, tick a milestone, join the thread.</p>
+      </div>
+      <span class="mascot-spot mascot-demo hero-in" style="--d: .3s"><button class="mascot" type="button" aria-label="Say hi to the ScaleSTEM robot" data-mascot data-lines="Try the slider in the lesson.|Everything here is clickable.|The Commons tab has a good thread."></button><span class="mascot-bubble" role="status" aria-live="polite"></span></span>
+    </section>
+
+    <section class="app-shell page-width hero-in" style="--d: .35s" aria-label="Interactive preview of the ScaleSTEM app" data-app>
+      <div class="app-chrome" aria-hidden="true">
+        <span class="app-dots"><i></i><i></i><i></i></span>
+        <span class="app-url"><b>app.scalestem.com</b>/<span data-app-path>learning-plan</span></span>
+        <span class="app-sample">Sample data</span>
+      </div>
+      <div class="app-bar">
+        <span class="app-logo">Scale<i>Stem</i></span>
+        <div class="app-tabs" role="tablist" aria-label="App sections" data-app-tabs>
+          <button role="tab" id="tab-plan" aria-controls="view-plan" aria-selected="true" data-path="learning-plan"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5C5.5 4 8.5 4 12 6c3.5-2 6.5-2 9-.5V19c-2.5-1.5-5.5-1.5-9 .5-3.5-2-6.5-2-9-.5Z M12 6v13.5"/></svg>Learning plan</button>
+          <button role="tab" id="tab-project" aria-controls="view-project" aria-selected="false" tabindex="-1" data-path="project"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6M10 3v6L4.5 19a1.5 1.5 0 0 0 1.3 2h12.4a1.5 1.5 0 0 0 1.3-2L14 9V3 M7 15h10"/></svg>Project</button>
+          <button role="tab" id="tab-career" aria-controls="view-career" aria-selected="false" tabindex="-1" data-path="career"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8h18v12H3Z M8 8V5h8v3 M3 13h18"/></svg>Career</button>
+          <button role="tab" id="tab-commons" aria-controls="view-commons" aria-selected="false" tabindex="-1" data-path="commons"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z M2.5 20c.8-3.6 3.3-5.5 6.5-5.5s5.7 1.9 6.5 5.5 M16 4.3a3.5 3.5 0 0 1 0 6.4 M18 14.8c2 .7 3.1 2.4 3.5 5.2"/></svg>Commons</button>
+          <span class="app-tab-ink" data-tab-ink aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <div class="app-views">
+        <!-- Learning plan -->
+        <div class="app-view is-active" role="tabpanel" id="view-plan" aria-labelledby="tab-plan" data-view="plan">
+          <div class="lp">
+            <aside class="lp-plan">
+              <p class="ap-kicker">Learning plan</p>
+              <p class="lp-meta">6 sections · 3 of 8 lessons complete</p>
+              <ol class="lp-units" data-lp-units>
+                <li class="is-done"><button type="button" data-lesson="0"><span>✓</span>Incompressible Navier–Stokes</button></li>
+                <li class="is-done"><button type="button" data-lesson="1"><span>✓</span>Finite volume method basics</button></li>
+                <li class="is-done"><button type="button" data-lesson="2"><span>✓</span>Mesh generation and data structures</button></li>
+                <li class="is-current is-open"><button type="button" data-lesson="3"><span>4</span>Adaptive mesh refinement</button></li>
+                <li class="is-locked"><button type="button" data-lesson="locked"><span></span>Refinement criteria in CFD</button></li>
+                <li class="is-locked"><button type="button" data-lesson="locked"><span></span>Solution algorithms and stability</button></li>
+              </ol>
+              <p class="lp-lock-note" data-lp-note aria-live="polite"></p>
+            </aside>
+
+            <article class="lp-lesson" data-lp-lesson>
+              <p class="ap-kicker" data-lp-kicker>Lesson 4 of 8 · Computational fluid dynamics</p>
+              <h2 class="ap-title" data-lp-title>Adaptive mesh refinement principles</h2>
+              <div class="lp-checked"><b>How this unit was checked</b> 16 of 16 code examples ran · technical review corrected 1</div>
+
+              <div class="lp-body" data-lp-body>
+                <h3>Core theory</h3>
+                <p>A uniform mesh wastes cells where the flow is calm and starves the wake where it isn’t. Adaptive refinement splits only the cells where the solution changes fastest. For incompressible flow we solve</p>
+                <div class="eq" role="math" aria-label="divergence of u equals zero"><span class="eq-n">(1)</span>∇ · <b>u</b> = 0</div>
+                <div class="eq" role="math" aria-label="momentum equation"><span class="eq-n">(2)</span><span class="frac"><span>∂<b>u</b></span><span>∂<i>t</i></span></span> + (<b>u</b> · ∇)<b>u</b> = −<span class="frac"><span>1</span><span><i>ρ</i></span></span>∇<i>p</i> + <i>ν</i>∇<sup>2</sup><b>u</b></div>
+                <p>On each cell <i>K</i> of size <i>h<sub>K</sub></i> we estimate the local error with a vorticity indicator, then flag the worst cells:</p>
+                <div class="eq" role="math" aria-label="refinement indicator"><span class="eq-n">(3)</span><i>η<sub>K</sub></i> = <i>h<sub>K</sub></i> ‖∇<i>ω</i>‖<sub><i>K</i></sub>,&nbsp;&nbsp; refine <i>K</i> if <i>η<sub>K</sub></i> &gt; <i>θ</i> · max<sub><i>J</i></sub> <i>η<sub>J</sub></i></div>
+
+                <figure class="amr" data-amr>
+                  <svg viewBox="0 0 320 160" data-amr-svg role="img" aria-label="Mesh around a teardrop airfoil; cells in the wake are refined"></svg>
+                  <figcaption>
+                    <label for="amr-theta">Threshold <i>θ</i> = <output data-amr-theta>0.35</output></label>
+                    <input id="amr-theta" type="range" min="0.1" max="0.9" step="0.05" value="0.35" data-amr-input>
+                    <span class="amr-stats"><b data-amr-cells>0</b> cells · <b data-amr-flagged>0</b> refined</span>
+                  </figcaption>
+                </figure>
+
+                <p>Halving <i>h</i> on a scheme of order <i>p</i> cuts the error by about 2<sup><i>p</i></sup>, which is why refining the right fraction of cells can beat refining all of them:</p>
+                <div class="eq" role="math" aria-label="error scales with h to the p"><span class="eq-n">(4)</span><i>e<sub>h</sub></i> ≈ <i>C h<sup>p</sup></i> &nbsp;⇒&nbsp; <span class="frac"><span><i>e<sub>h</sub></i></span><span><i>e</i><sub><i>h</i>/2</sub></span></span> ≈ 2<sup><i>p</i></sup></div>
+              </div>
+            </article>
+
+            <aside class="lp-rail">
+              <div class="lp-toc">
+                <p class="ap-kicker">In this unit <small>~14 min read</small></p>
+                <ol><li>Learning goals</li><li class="is-on">Core theory</li><li>Worked example</li><li>Connection to project</li><li>Common pitfalls</li><li>Check yourself</li></ol>
+              </div>
+              <div class="lp-checkpoints">
+                <p><b>Checkpoints</b><small data-cp-count>1 of 3 passed</small></p>
+                <button type="button" class="is-pass" data-cp><i></i>Understanding check</button>
+                <button type="button" data-cp><i></i>Reading check</button>
+                <button type="button" data-cp><i></i>Homework</button>
+              </div>
+              <div class="lp-advisor">
+                <p class="ap-kicker">ScaleStem advisor</p>
+                <p class="lp-q">Why the vorticity gradient and not just velocity?</p>
+                <p class="lp-a" data-type-on-view>Velocity is smooth across most of your wake. Vorticity changes sharply at the shear layers, so its gradient points straight at the cells your lift estimate depends on.</p>
+              </div>
+            </aside>
+          </div>
+        </div>
+
+        <!-- Project -->
+        <div class="app-view" role="tabpanel" id="view-project" aria-labelledby="tab-project" data-view="project" hidden>
+          <div class="pj">
+            <p class="ap-kicker">Project roadmap</p>
+            <h2 class="ap-title">Adaptive mesh study of a teardrop airfoil</h2>
+            <p class="ap-sub">One milestone at a time: link your work, say what you found, get feedback.</p>
+
+            <div class="pj-journey">
+              <p class="pj-journey-top"><span>Journey · stage <b data-stage-num>7</b> of 16</span><span class="pj-legend"><i class="c-learn"></i>Learning <i class="c-proj"></i>Project <i class="c-career"></i>Career</span></p>
+              <ol class="pj-stages" data-stages></ol>
+              <p class="pj-stage-desc" data-stage-desc aria-live="polite"></p>
+            </div>
+
+            <div class="pj-tabs" role="group" aria-label="Project panels">
+              <button type="button" class="is-on" data-pj-tab="milestone">Milestone (4/12 accepted)</button>
+              <button type="button" data-pj-tab="deliverables">Deliverables</button>
+            </div>
+
+            <div class="pj-panel is-on" data-pj-panel="milestone">
+              <div class="pj-card" data-milestone>
+                <p class="pj-card-top"><span class="ap-kicker">Your milestone now · 5 of 12</span><span class="pj-status" data-ms-status>○ Ready</span></p>
+                <h3>Mesh convergence study</h3>
+                <p class="pj-brief">Run the solver on three meshes with a constant refinement ratio. Report lift and drag on each, the observed order of accuracy, and the grid convergence index.</p>
+                <p class="ap-label">It’s done when</p>
+                <ul class="pj-done" data-ms-checks>
+                  <li><button type="button" aria-pressed="true" class="is-on"><i></i>Three meshes run with r = 2</button></li>
+                  <li><button type="button" aria-pressed="false"><i></i>Observed order <i class="v">p</i> reported</button></li>
+                  <li><button type="button" aria-pressed="false"><i></i>GCI under 2% on the finest pair</button></li>
+                </ul>
+                <p class="pj-hint" data-ms-hint>Tick all three to submit.</p>
+                <p class="ap-label">Link to your work</p>
+                <p class="pj-link">github.com/jordanlee/teardrop-airfoil-cfd/tree/main/convergence</p>
+                <button type="button" class="ap-btn" data-ms-submit disabled>Submit for review</button>
+                <div class="pj-feedback" data-ms-feedback hidden>
+                  <p><b>Accepted.</b> Clear table and a defensible GCI. Next: compare your finest-mesh lift against the reference data in milestone 6.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-panel" data-pj-panel="deliverables" hidden>
+              <ul class="pj-deliv">
+                <li><span class="d-ico">{ }</span><div><b>GitHub repository</b><small>jordanlee/teardrop-airfoil-cfd · README, solver, results</small></div><em class="is-live">In progress</em></li>
+                <li><span class="d-ico d-pdf">PDF</span><div><b>Technical report</b><small>Methods, validation and results</small></div><em>Stage 13</em></li>
+                <li><span class="d-ico d-j">J</span><div><b>ScaleSTEM Computational Research Journal</b><small>Your published write-up</small></div><em>Stage 15</em></li>
+                <li><span class="d-ico d-cv">CV</span><div><b>Targeted résumé line</b><small>Aimed at the roles you chose in stage 1</small></div><em>Stage 16</em></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Career -->
+        <div class="app-view" role="tabpanel" id="view-career" aria-labelledby="tab-career" data-view="career" hidden>
+          <div class="cr">
+            <p class="ap-kicker">Career</p>
+            <h2 class="ap-title">Applications and outreach</h2>
+            <p class="ap-sub">Log every application and professor email in a line, then tap what happened.</p>
+            <div class="cr-stats">
+              <div><b data-count="14">0</b><span>Sent</span></div>
+              <div><b data-count="5" data-stat="replies">0</b><span>Replies</span></div>
+              <div><b data-count="2" data-stat="interviews">0</b><span>Interviews or offers</span></div>
+            </div>
+            <div class="cr-grid">
+              <div class="cr-log">
+                <p class="ap-label">Your log <small>tap a status to update it</small></p>
+                <ul data-cr-log>
+                  <li><span class="cr-type t-email">Email</span><div><b>Prof. A. Rivera</b><small>Aerospace CFD lab · sent with repo link</small></div><button type="button" data-state="1">Replied</button></li>
+                  <li><span class="cr-type">Application</span><div><b>National lab summer internship</b><small>Computational science · deadline Jan 15</small></div><button type="button" data-state="2">Interview</button></li>
+                  <li><span class="cr-type t-email">Email</span><div><b>Dr. K. Osei</b><small>R&amp;D scientist · turbulence modeling</small></div><button type="button" data-state="0">Sent</button></li>
+                  <li><span class="cr-type">Application</span><div><b>CFD engineering intern</b><small>Aerospace startup · via program site</small></div><button type="button" data-state="1">Replied</button></li>
+                </ul>
+              </div>
+              <div class="cr-roles">
+                <p class="ap-label">Matched to your goal</p>
+                <ul>
+                  <li><b>Graduate research fellowship</b><small>Computational fluid dynamics</small><span class="cr-fit"><i style="--w: 92%"></i></span></li>
+                  <li><b>Modeling &amp; simulation intern</b><small>Aerospace R&amp;D</small><span class="cr-fit"><i style="--w: 86%"></i></span></li>
+                  <li><b>Scientific computing intern</b><small>National lab</small><span class="cr-fit"><i style="--w: 78%"></i></span></li>
+                </ul>
+                <p class="cr-line"><span class="ap-label">Your résumé line</span>Built and validated an adaptive-mesh CFD solver in Python; published in the ScaleSTEM Computational Research Journal.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Commons -->
+        <div class="app-view" role="tabpanel" id="view-commons" aria-labelledby="tab-commons" data-view="commons" hidden>
+          <div class="cm">
+            <aside class="cm-nav">
+              <p class="cm-brand">Commons</p>
+              <span class="is-on">Home</span><span>Researchers</span><span>Profile</span>
+            </aside>
+            <div class="cm-feed">
+              <p class="cm-head"><b>Home</b><span class="cm-tabs"><i class="is-on">Latest</i><i>Project updates</i></span></p>
+              <form class="cm-compose" data-cm-compose>
+                <span class="av av-you">JL</span>
+                <label class="sr-only" for="cm-input">Write a post</label>
+                <input id="cm-input" type="text" maxlength="180" placeholder="What are you working on?" autocomplete="off" data-cm-input>
+                <button type="submit" class="ap-pill">Post</button>
+              </form>
+              <ol class="cm-posts" data-cm-posts>
+                <li class="cm-post"><span class="av av-m">MC</span><div><p class="cm-who"><b>Maya Chen</b> @maya · 2h <em>Cylinder wake</em></p><p>My drag coefficient moves ~3% every time I refine the mesh. At what point do I get to call it converged?</p><p class="cm-act"><button type="button" data-like>♥ <span>4</span></button><span class="cm-replies">4 replies</span></p></div></li>
+                <li class="cm-post is-reply"><span class="av av-you">JL</span><div><p class="cm-who"><b>Jordan Lee</b> @jordan · 2h <em>Teardrop airfoil</em></p><p>Same thing on my airfoil. I ran three meshes with a constant ratio r = 2 and used Richardson extrapolation. Observed order came out p ≈ 1.9, so I report the GCI instead of eyeballing it.</p><p class="cm-act"><button type="button" data-like>♥ <span>6</span></button></p></div></li>
+                <li class="cm-post is-reply"><span class="av av-m">MC</span><div><p class="cm-who"><b>Maya Chen</b> @maya · 1h</p><p>GCI as in grid convergence index? Do you have the formula handy?</p><p class="cm-act"><button type="button" data-like>♥ <span>1</span></button></p></div></li>
+                <li class="cm-post is-reply"><span class="av av-you">JL</span><div><p class="cm-who"><b>Jordan Lee</b> @jordan · 1h</p><p>GCI = 1.25 |ε| / (r<sup>p</sup> − 1), where ε is the relative change between your two finest meshes. Under ~2% and you can defend it in the report.</p><p class="cm-act"><button type="button" data-like>♥ <span>9</span></button></p></div></li>
+                <li class="cm-post is-reply"><span class="av av-d">DP</span><div><p class="cm-who"><b>Dev Patel</b> @dev · 40m <em>Protein folding</em></p><p>Borrowing this for my learning-rate sweeps. Same idea: show the number stops moving before you claim it.</p><p class="cm-act"><button type="button" data-like>♥ <span>3</span></button></p></div></li>
+              </ol>
+              <p class="cm-typing" data-cm-typing aria-hidden="true"><span class="av av-m">MC</span><i></i><i></i><i></i></p>
+            </div>
+            <aside class="cm-side">
+              <div class="cm-card">
+                <p class="ap-kicker">Your research</p>
+                <b>Adaptive mesh study of a teardrop airfoil</b>
+                <p class="cm-prog"><span>4 of 12 milestones</span><span>33%</span></p>
+                <i class="cm-bar"><s></s></i>
+              </div>
+              <div class="cm-card">
+                <b>Researchers</b>
+                <p class="cm-r"><span class="av av-m">MC</span><span>Maya Chen<small>Vortex shedding behind a cylinder</small></span></p>
+                <p class="cm-r"><span class="av av-d">DP</span><span>Dev Patel<small>Coarse-grained protein folding</small></span></p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <p class="demo-note page-width">A preview with sample data. Names, posts and applications are illustrative; nothing you type here is sent anywhere.</p>
+
+    <section class="demo-close page-width" data-reveal>
+      <p>Want a workspace of your own?</p>
+      <a class="sketch-cta" href="https://tally.so/r/VppXWv?fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAadMCktHfGu_B7Ss2otcsTITd8fbgHAADUqcKLJmrdyJl_mdKVUUmWXJt0Fdzg_aem_FYqhgGGfs26yFqMbzpCalw" target="_blank" rel="noopener noreferrer">Register interest <span aria-hidden="true">↗</span></a>
+      <a class="text-link demo-faq-link" href="../faq/">Questions first? Read the FAQ →</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Need help? <a href="mailto:scalestem@gmail.com">scalestem@gmail.com ↗</a></p>
+  </footer>
+  <template id="mascot-template">
+    <svg class="m-svg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewBox="0 0 200 200" fill="none" stroke="#1a1a18" stroke-width="4.3" stroke-linejoin="round" stroke-linecap="round">
+      <g class="m-books">
+        <path d="M41 145 L84 136 L95 154 L63 164 Z" fill="#fffefa"/>
+        <path d="M41 145 L63 164 L63 171 L41 152 Z" fill="#1a1a18"/>
+        <path d="M63 164 L95 154 L95 160 L63 171 Z" fill="#fffefa"/>
+        <path d="M66 167 L92 158.5" stroke-width="1.8"/>
+        <path d="M51 135 L80 129 L89 140 L64 147 Z" fill="#fffefa"/>
+        <path d="M51 135 L64 147 L64 153 L51 141 Z" fill="#1a1a18"/>
+        <path d="M64 147 L89 140 L89 146 L64 153 Z" fill="#fffefa"/>
+      </g>
+      <g class="m-bot">
+        <g class="m-head">
+          <path d="M58 99 L73 95 L75 125 L56 124 Z" fill="#fffefa"/>
+          <path d="M55 106 L63 104 L64 121 L56 122 Z" fill="#1a1a18" stroke="none"/>
+          <path d="M134 94 L141 96 L142 112 L135 114 Z" fill="#fffefa"/>
+          <path d="M80 92 L127 87 L135 93 L135 121 L127 127 L82 131 L75 126 L75 97 Z" fill="#fffefa"/>
+          <path d="M75 126 L82 131 L127 127 L127 131 L82 135 L75 130 Z" fill="#1a1a18"/>
+          <path class="m-visor" d="M91 103 L122 100 Q130 99.5 130 107 L130 114 Q130 120 123 121 L92 124 Q85 124.5 85 117 L85 110 Q85 103.5 91 103 Z" fill="#1a1a18"/>
+          <g class="m-eyes">
+            <g class="m-eyes-open" fill="#fffefa" stroke="none">
+              <path d="M94.5 108.4 L100.5 107.9 L100.5 120.2 L94.5 120.7 Z"/>
+              <path d="M115.5 106.2 L121.5 105.7 L121.5 117.6 L115.5 118.1 Z"/>
+            </g>
+            <g class="m-eyes-happy" stroke="#fffefa" stroke-width="2.8">
+              <path d="M93.5 116 Q97.5 109 101.5 115.5"/>
+              <path d="M114.5 113.5 Q118.5 106.5 122.5 113"/>
+            </g>
+          </g>
+        </g>
+        <g class="m-cap">
+          <path d="M72 72 L101 86 L101 96 L77 88 Z" fill="#1a1a18"/>
+          <path d="M101 86 L126 74 L126 85 L101 96 Z" fill="#fffefa"/>
+          <path d="M59 61 L101 79 L142 61 L142 67 L101 86 L59 68 Z" fill="#1a1a18"/>
+          <path d="M101 79 L142 61 L142 67 L101 86 Z" fill="#fffefa"/>
+          <path d="M59 61 L100 44 L142 61 L101 79 Z" fill="#fffefa"/>
+          <path d="M77 66 L97 60" stroke-width="2.4"/>
+          <g class="m-tassel">
+            <path d="M68 70 V81" stroke-width="3.2"/>
+            <rect x="64.5" y="80" width="8.5" height="13" rx="3" fill="#fffefa"/>
+          </g>
+        </g>
+      </g>
+      <g class="m-sparks" stroke-width="3.2">
+        <path d="M48 76 L39 72 M46 88 L37 89" stroke="#347b4d"/>
+        <path d="M150 78 L159 72 M153 90 L162 90" stroke="#c43d32"/>
+        <path d="M100 32 L100 23 M112 35 L118 28" stroke="#2f4b7c"/>
+      </g>
+      <g class="m-laptop">
+        <path d="M100 149 L135 143 L152 150 L117 157 Z" fill="#fffefa"/>
+        <path d="M100 149 L117 157 L117 161 L100 153 Z" fill="#1a1a18"/>
+        <path d="M117 157 L152 150 L152 154 L117 161 Z" fill="#1a1a18"/>
+        <path d="M120 127.5 L159 120 L151 150 L116 157.5 Z" fill="#fffefa"/>
+        <path d="M123.5 130.5 L154.5 124.5 L148 147 L119.5 152.5 Z" fill="#1a1a18" stroke-width="1.6"/>
+        <path class="m-prompt" d="M130 136 L136 140 L130 145" stroke="#fffefa" stroke-width="2.4"/>
+        <path class="m-cursor" d="M138 143.5 L144 142.4" stroke="#fffefa" stroke-width="2.4"/>
+        <text class="m-hi" x="138" y="144" fill="#fffefa" stroke="none" font-family="Consolas, monospace" font-size="10" font-weight="700" transform="rotate(-10 138 144)">hi!</text>
+      </g>
+    </svg>
+  </template>
+</body>
+</html>

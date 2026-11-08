@@ -36,7 +36,7 @@ button, input { font: inherit; }
 .nav>a:not(.nav-apply)::after { position: absolute; right: 0; bottom: -5px; left: 0; height: 1.5px; background: currentColor; border-radius: 2px; content: ''; transform: scaleX(0) rotate(-1deg); transform-origin: left; transition: transform .35s var(--ease); }
 .nav>a:hover, .nav>a.is-current, .text-link:hover { color: var(--accent); }
 .nav>a:hover::after, .nav>a.is-current::after { transform: scaleX(1) rotate(-1deg); }
-.nav-apply { justify-self: end; position: relative; display: inline-flex; align-items: center; gap: 8px; padding: 7px 0; color: var(--ink); font: 500 16px/1.2 var(--hand); transition: color .2s ease; }
+.nav-apply { justify-self: end; position: relative; display: inline-flex; white-space: nowrap; align-items: center; gap: 8px; padding: 7px 0; color: var(--ink); font: 500 16px/1.2 var(--hand); transition: color .2s ease; }
 .nav-apply::before { position: absolute; right: 34px; bottom: 3px; left: 1px; border-bottom: 1px solid rgba(47, 75, 124, .52); content: ''; transform: rotate(-1deg); transition: transform .25s ease; }
 .nav-apply:hover { color: var(--accent); }
 .nav-apply:hover::before { transform: rotate(1deg) scaleX(1.03); }
@@ -547,7 +547,7 @@ a:hover .arrow-circle, button:hover .arrow-circle { transform: translate(3px, -2
 @media (max-width: 900px) {
   .page-width { width: min(var(--max-width), calc(100% - 48px)); }
   .site-header { padding-inline: 24px; gap: 14px; }
-  .nav { gap: 21px; font-size: 13px; }
+  .nav { gap: clamp(12px, 2vw, 21px); font-size: 13px; white-space: nowrap; }
   .problem-heading h1 { font-size: clamp(43px, 6vw, 66px); }
   .market-quote { width: 300px; }
   .resume-document { min-height: 550px; padding: 22px 21px 36px; }
@@ -564,7 +564,7 @@ a:hover .arrow-circle, button:hover .arrow-circle { transform: translate(3px, -2
   .menu-toggle span { width: 23px; height: 1px; background: var(--ink); transition: transform .3s var(--ease); }
   .menu-toggle[aria-expanded="true"] span:first-child { transform: translateY(3.5px) rotate(45deg); }
   .menu-toggle[aria-expanded="true"] span:last-child { transform: translateY(-3.5px) rotate(-45deg); }
-  .nav { display: flex; position: absolute; inset: 63px 0 auto; padding: 19px 20px 23px; flex-direction: column; align-items: stretch; gap: 18px; background: var(--paper); border-bottom: 1px solid var(--line); font-size: 14px; visibility: hidden; opacity: 0; transform: translateY(-8px); pointer-events: none; transition: opacity .3s ease, transform .35s var(--ease), visibility 0s .35s; }
+  .nav { display: flex; justify-self: stretch; position: absolute; inset: 63px 0 auto; padding: 19px 20px 23px; flex-direction: column; align-items: stretch; gap: 18px; background: var(--paper); border-bottom: 1px solid var(--line); font-size: 14px; visibility: hidden; opacity: 0; transform: translateY(-8px); pointer-events: none; transition: opacity .3s ease, transform .35s var(--ease), visibility 0s .35s; }
   .nav.open { visibility: visible; opacity: 1; transform: none; pointer-events: auto; transition: opacity .3s ease, transform .35s var(--ease), visibility 0s; }
   .nav>a:not(.nav-apply)::after { right: auto; width: 60px; }
   .nav-apply { grid-column: 2; grid-row: 1; justify-self: end; gap: 5px; padding: 6px 0; font-size: 11px; }
@@ -631,4 +631,8 @@ a:hover .arrow-circle, button:hover .arrow-circle { transform: translate(3px, -2
   .process-section::before { animation: none; }
   .m-bot, .m-tassel, .m-eyes-open, .m-cursor { animation: none!important; }
   .mascot:hover .m-cap, .mascot.is-poked .m-cap, .mascot:hover .m-bot, .mascot.is-poked .m-bot, .mascot:hover .m-sparks path, .mascot.is-poked .m-sparks path { animation: none!important; }
+}
+
+@media (min-width: 681px) and (max-width: 860px) {
+  .nav a[href="#problem"] { display: none; }
 }
